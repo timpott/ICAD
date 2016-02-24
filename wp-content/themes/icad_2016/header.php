@@ -23,26 +23,51 @@
     	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     
+    <div class="top-bar">    
+    </div>
+    <!-- /top -->
+    
     <div class="container">
+	    <div class="row">
+		    <header class="header" role="banner">
+			    <div class="col-lg-16">
+				    <nav class="sub-nav pull-right">
+					    <ul>
+						    <li><a href="#">Login</a></li>
+						    <li><a href="#">Search</a></li>
+						    <li><a href="#">Cart</a></li>
+						    <li><a href="#" target="_blank">Facebook</a></li>
+						    <li><a href="#" target="_blank">Twitter</a></li>
+						    <li><a href="#" target="_blank">Linkedin</a></li>
+					    </ul>
+				    </nav>
+			    </div>
+			    
+			    <div class="col-lg-8">
+				    <a href="<?php echo home_url(); ?>">
+					    <?php $blog_title = get_bloginfo( 'name' ); ?>
+			    		<p><?php echo $blog_title; ?></p>
+			    	</a>
+			    </div>
+			    
+			    <div class="col-lg-8">
+				    <p>Hero</p>
+			    </div> 
+			    
+			    <div class="clearfix"></div>
+			    
+			    <nav class="nav" role="navigation">
+				    <?php html5blank_nav(); ?>
+			    </nav>
+			    <!-- /nav -->
+		    </header>
+		    <!-- /header -->
+	    </div>
+	    <!-- /row -->
 	
-			<!-- header -->
-			<header class="header clear" role="banner">
-
-					<!-- logo -->
-					<div class="logo">
 <!--
 						<a href="<?php echo home_url(); ?>">
 							<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">
 						</a>
 -->
-					</div>
-					<!-- /logo -->
 
-					<!-- nav -->
-					<nav class="nav" role="navigation">
-						<?php html5blank_nav(); ?>
-					</nav>
-					<!-- /nav -->
-
-			</header>
-			<!-- /header -->

@@ -40,6 +40,10 @@ fieldset {
 textarea {
   resize: vertical; }
 
+.top-bar {
+  background-color: #ffebc9;
+  height: 10px; }
+
 /*------------------------------------------------
 	HTML5-bp browser upgrade
 ------------------------------------------------*/
