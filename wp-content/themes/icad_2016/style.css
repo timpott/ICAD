@@ -1,0 +1,17 @@
+/*
+	Theme Name: ICAD 2016
+	Theme URI: http://ebow.ie
+	Description: ICAD 2016 Responsive Wordpress Theme
+	Version: 1.0
+	Author: Tim Potter (@timpott)
+
+	License: MIT
+	License URI: http://opensource.org/licenses/mit-license.php
+*/
+
+/*-------------------------------------------------------------------------
+	Imports
+-------------------------------------------------------------------------*/
+
+@import url("includes/css/bootstrap.css");
+@import url("includes/css/main.css");
