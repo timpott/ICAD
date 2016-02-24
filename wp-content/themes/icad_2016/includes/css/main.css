@@ -1,13 +1,21 @@
 @import url(https://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic);
+@font-face {
+  font-family: 'gt_sectrabook';
+  src: url("../../fonts/gt-sectra-book-webfont.eot");
+  src: url("../../fonts/gt-sectra-book-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/gt-sectra-book-webfont.woff2") format("woff2"), url("../../fonts/gt-sectra-book-webfont.woff") format("woff"), url("../../fonts/gt-sectra-book-webfont.ttf") format("truetype"), url("../../fonts/gt-sectra-book-webfont.svg#gt_sectrabook") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'gt_sectrablack';
+  src: url("../../fonts/gt-sectra-black-webfont.eot");
+  src: url("../../fonts/gt-sectra-black-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/gt-sectra-black-webfont.woff2") format("woff2"), url("../../fonts/gt-sectra-black-webfont.woff") format("woff"), url("../../fonts/gt-sectra-black-webfont.ttf") format("truetype"), url("../../fonts/gt-sectra-black-webfont.svg#gt_sectrablack") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+
 /*------------------------------------------------
 	HTML5-bp opininated defaults
 ------------------------------------------------*/
-body {
-  color: #222;
-  font-size: 1em;
-  font-family: 'Karla', sans-serif;
-  line-height: 1.4; }
-
 ::-moz-selection {
   background-color: #b3d4fc;
   text-shadow: none; }
