@@ -10,7 +10,7 @@
 			<!-- /footer -->
 
 		</div>
-		<!-- /wrapper -->
+		<!-- /container -->
 
 		<?php wp_footer(); ?>
 
