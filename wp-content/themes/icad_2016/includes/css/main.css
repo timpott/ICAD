@@ -1,3 +1,8 @@
+/*------------------------------------------------
+	Mixins
+------------------------------------------------*/
+/* Block level style for parent elements */
+/* Set height and background for grid; development only */
 @import url(https://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic);
 @font-face {
   font-family: 'gt_sectrabook';
@@ -43,6 +48,36 @@ textarea {
 .top-bar {
   background-color: #ffebc9;
   height: 10px; }
+
+section,
+main {
+  width: 100%;
+  float: left;
+  display: block; }
+
+.dev-box {
+  height: 210px;
+  background-color: #ffc3ad; }
+
+.dev-box.large {
+  height: 260px;
+  background-color: #ffc3ad; }
+
+.dev-box.c-01 {
+  height: 260px;
+  background-color: #00ffdc; }
+
+.dev-box.c-02 {
+  height: 260px;
+  background-color: #ffa19f; }
+
+.dev-box.c-03 {
+  height: 260px;
+  background-color: #cfa1f3; }
+
+.dev-box-inner {
+  height: 195px;
+  background-color: #000000; }
 
 /*------------------------------------------------
 	HTML5-bp browser upgrade

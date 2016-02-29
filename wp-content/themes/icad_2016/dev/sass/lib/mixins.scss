@@ -1,0 +1,18 @@
+/*------------------------------------------------
+	Mixins
+------------------------------------------------*/
+
+/* Block level style for parent elements */
+@mixin block-reset {
+	width: 100%;
+	float: left;
+	display: block;
+}
+
+/* Set height and background for grid; development only */
+@mixin dev-box($height, $color) {
+	height: $height;
+	background: {
+		color: $color;
+	}
+}

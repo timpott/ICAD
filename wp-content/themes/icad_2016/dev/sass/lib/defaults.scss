@@ -45,3 +45,32 @@ textarea {
 	}
 	height: 10px;
 }
+
+section,
+main {
+	@include block-reset;
+}
+
+.dev-box {
+	@include dev-box(210px, $brand-primary);
+}
+
+.dev-box.large {
+	@include dev-box(260px, $brand-primary);
+}
+
+.dev-box.c-01 {
+	@include dev-box(260px, $brand-secondary);
+}
+
+.dev-box.c-02 {
+	@include dev-box(260px, $brand-primary-darker);
+}
+
+.dev-box.c-03 {
+	@include dev-box(260px, $brand-third);
+}
+
+.dev-box-inner {
+	@include dev-box(195px, $brand-dark);
+}
