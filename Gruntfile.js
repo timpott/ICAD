@@ -18,7 +18,7 @@ module.exports = function(grunt) {
 				}
 			},
 			image: {
-				files: ['wp-content/themes/icad_2016/dev/img/*.{png,jpg,gif}'],
+				files: ['wp-content/themes/icad_2016/dev/img/**/*.{svg,png,jpg,gif}'],
 				tasks: ['imagemin'],
 				options: {
 					spawn: false,
@@ -44,7 +44,7 @@ module.exports = function(grunt) {
 				files: [{
 					expand: true,
 					cwd: 'wp-content/themes/icad_2016/dev/img/',
-					src: ['**/*.{png,jpg,gif}'],
+					src: ['**/*.{svg,png,jpg,gif}'],
 					dest: 'wp-content/themes/icad_2016/includes/img/'
 				}]
 			}

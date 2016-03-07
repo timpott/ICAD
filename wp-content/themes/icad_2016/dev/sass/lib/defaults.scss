@@ -46,31 +46,62 @@ textarea {
 	height: 10px;
 }
 
+img {
+	
+}
+
+img.load {
+	display: block;
+}
+
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 2px solid #000;
+	margin: 50px 0;
+	padding: 0;
+	width: 100%;
+	float: left;
+}
+
+.background-class {} /* Shared properties for detected features */
+.svg .background-class {background:url(img/graphic.svg);} /* SVG feature property */
+.no-svg .background-class {background:url(img/graphic.png);} /* PNG feature property */
+
+footer,
+.sponsors {
+	background: {
+		color: #000;
+	}
+}
+
 section,
 main {
 	@include block-reset;
 }
 
-.dev-box {
-	@include dev-box(210px, $brand-primary);
+.home-box {
+	@include home-box(210px, none);
+	border: 1px solid #333;
 }
 
-.dev-box.large {
-	@include dev-box(260px, $brand-primary);
+.home-box.large {
+	@include home-box(260px, $brand-primary);
 }
 
-.dev-box.c-01 {
-	@include dev-box(260px, $brand-secondary);
+.home-box.c-01 {
+	@include home-box(260px, $brand-secondary);
 }
 
-.dev-box.c-02 {
-	@include dev-box(260px, $brand-primary-darker);
+.home-box.c-02 {
+	@include home-box(260px, $brand-primary-darker);
 }
 
-.dev-box.c-03 {
-	@include dev-box(260px, $brand-third);
+.home-box.c-03 {
+	@include home-box(260px, $brand-third);
 }
 
-.dev-box-inner {
-	@include dev-box(195px, $brand-dark);
+.home-box-inner {
+	@include home-box(195px, $brand-dark);
 }

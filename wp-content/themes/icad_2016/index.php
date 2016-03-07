@@ -29,19 +29,19 @@
 		<section class="quick-links">
 			<div class="row">
 				<div class="col-lg-4">
-					<div class="dev-box"></div>	
+					<div class="home-box" data-src=""></div>	
 				</div>
 					
 				<div class="col-lg-4">
-					<div class="dev-box"></div>		
+					<div class="home-box" data-src=""></div>		
 				</div>
 						
 				<div class="col-lg-4">
-					<div class="dev-box"></div>		
+					<div class="home-box" data-src=""></div>		
 				</div>
 					
 				<div class="col-lg-4">
-					<div class="dev-box"></div>	
+					<div class="home-box" data-src=""></div>	
 				</div>
 			</div>
 			<!-- /row -->
@@ -52,15 +52,15 @@
 		<section class="block-1">
 			<div class="row">
 				<div class="col-lg-5">
-					<div class="dev-box large c-01"></div>
+					<div class="home-box large c-01"></div>
 				</div>
 				
 				<div class="col-lg-5">
-					<div class="dev-box large c-01"></div>	
+					<div class="home-box large c-01"></div>	
 				</div>
 					
 				<div class="col-lg-5">
-					<div class="dev-box large c-01"></div>
+					<div class="home-box large c-01"></div>
 				</div>
 			</div>
 			<!-- row -->
@@ -71,15 +71,15 @@
 		<section class="block-2">
 			<div class="row">
 				<div class="col-lg-5">
-					<div class="dev-box large c-02"></div>
+					<div class="home-box large c-02"></div>
 				</div>
 				
 				<div class="col-lg-5">
-					<div class="dev-box large c-02"></div>	
+					<div class="home-box large c-02"></div>	
 				</div>
 					
 				<div class="col-lg-5">
-					<div class="dev-box large c-02"></div>
+					<div class="home-box large c-02"></div>
 				</div>
 			</div>
 			<!-- row -->
@@ -90,15 +90,15 @@
 		<section class="block-3">
 			<div class="row">
 				<div class="col-lg-5">
-					<div class="dev-box large c-03"></div>
+					<div class="home-box large c-03"></div>
 				</div>
 				
 				<div class="col-lg-5">
-					<div class="dev-box large c-03"></div>	
+					<div class="home-box large c-03"></div>	
 				</div>
 					
 				<div class="col-lg-5">
-					<div class="dev-box large c-03"></div>
+					<div class="home-box large c-03"></div>
 				</div>
 			</div>
 			<!-- row -->
@@ -122,7 +122,9 @@
 				  	  $time = get_sub_field('time');
 				  	  $title = get_sub_field('title');
 				  	  $text = get_sub_field('event_intro');
-				  	  $link = get_sub_field('link'); ?>
+				  	  $link = get_sub_field('link'); 
+				  	  
+				  	  ?>
 				  	
 				  	  <div class="col-lg-4">
 					  	 <?php 

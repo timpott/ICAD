@@ -98,10 +98,13 @@ function html5blank_header_scripts()
         wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js', array(), '1.11.3');
         wp_enqueue_script('jquery');
         
-        wp_register_script('modernizr', get_template_directory_uri() . '/includes/js/modernizr-2.8.3.min.js', array('jquery'), '2.8.3');
+        wp_register_script('modernizr', get_template_directory_uri() . '/includes/js/modernizr-2.8.3.min.js', array(), '2.8.3');
         wp_enqueue_script('modernizr'); // Enqueue it!
+        
+        wp_register_script('lazyload', get_template_directory_uri() . '/includes/js/jquery.lazy.min.js', array(), '1.6.5');
+        wp_enqueue_script('lazyload'); // Enqueue it!
 
-        wp_register_script('icadscripts', get_template_directory_uri() . '/includes/js/main.min.js', array('jquery'), '1.0.0'); // Custom scripts
+        wp_register_script('icadscripts', get_template_directory_uri() . '/includes/js/main.min.js', array(), '1.0.0'); // Custom scripts
         wp_enqueue_script('icadscripts'); // Enqueue it!
     }
 }
@@ -128,7 +131,7 @@ function register_html5_menu()
     register_nav_menus(array( // Using array to specify more menus if needed
         'header-menu' => __('Header Menu', 'html5blank'), // Main Navigation
         'sidebar-menu' => __('Sidebar Menu', 'html5blank'), // Sidebar Navigation
-        'extra-menu' => __('Extra Menu', 'html5blank') // Extra Navigation if needed (duplicate as many as you need!)
+        'footer-menu' => __('Footer Menu', 'html5blank') // Footer Navigation
     ));
 }
 
@@ -420,7 +423,33 @@ if( function_exists('acf_add_options_page') ) {
 	
 	acf_add_options_sub_page('General');
 	acf_add_options_sub_page('Home');
+	acf_add_options_sub_page('Footer');
 	
 }
+
+function alter_att_attributes_wpse_102079($attr) { 
+	$attr['data-src'] = $attr['src']; 
+	$attr['src'] = ''. get_template_directory_uri() .'/includes/img/icons/loading.png ';
+	$classes = $attr['class'];
+	$classes = $classes . ' loader';
+	$attr['class'] = $classes;
+	return $attr; 
+} 
+	
+add_filter( 'wp_get_attachment_image_attributes', 'alter_att_attributes_wpse_102079');
+
+
+/* Add Data-src to wp_get_attachment_image */
+/*
+function alter_att_attributes_wpse_102079($attr) {
+  $attr['data-src'] = $attr['src'];
+  $classes = $attr['class'];
+  $classes = $classes . ' loader';
+  $attr['class'] = $classes;
+  return $attr;
+}
+add_filter( 'wp_get_attachment_image_attributes', 'alter_att_attributes_wpse_102079');
+*/
+
 
 ?>

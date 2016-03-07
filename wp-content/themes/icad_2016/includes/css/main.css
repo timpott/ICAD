@@ -2,7 +2,6 @@
 	Mixins
 ------------------------------------------------*/
 /* Block level style for parent elements */
-/* Set height and background for grid; development only */
 @import url(https://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic);
 @font-face {
   font-family: 'gt_sectrabook';
@@ -49,33 +48,57 @@ textarea {
   background-color: #ffebc9;
   height: 10px; }
 
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 2px solid #000;
+  margin: 50px 0;
+  padding: 0;
+  width: 100%;
+  float: left; }
+
+/* Shared properties for detected features */
+.svg .background-class {
+  background: url(img/graphic.svg); }
+
+/* SVG feature property */
+.no-svg .background-class {
+  background: url(img/graphic.png); }
+
+/* PNG feature property */
+footer,
+.sponsors {
+  background-color: #000; }
+
 section,
 main {
   width: 100%;
   float: left;
   display: block; }
 
-.dev-box {
+.home-box {
   height: 210px;
-  background-color: #ffc3ad; }
+  background-color: none;
+  border: 1px solid #333; }
 
-.dev-box.large {
+.home-box.large {
   height: 260px;
   background-color: #ffc3ad; }
 
-.dev-box.c-01 {
+.home-box.c-01 {
   height: 260px;
   background-color: #00ffdc; }
 
-.dev-box.c-02 {
+.home-box.c-02 {
   height: 260px;
   background-color: #ffa19f; }
 
-.dev-box.c-03 {
+.home-box.c-03 {
   height: 260px;
   background-color: #cfa1f3; }
 
-.dev-box-inner {
+.home-box-inner {
   height: 195px;
   background-color: #000000; }
 

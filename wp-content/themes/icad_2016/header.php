@@ -45,8 +45,8 @@
 			    
 			    <div class="col-lg-8">
 				    <a href="<?php echo home_url(); ?>">
-					    <?php $blog_title = get_bloginfo( 'name' ); ?>
-			    		<p><?php echo $blog_title; ?></p>
+			    		<img class="loader" data-src="<?php echo get_template_directory_uri(); ?>/includes/img/icons/logo.svg" alt="ICAD Logo" class="logo-img" />
+			    		<noscript><img src="<?php echo get_template_directory_uri(); ?>/includes/img/icons/logo.svg"></noscript>
 			    	</a>
 			    </div>
 			    
@@ -64,10 +64,3 @@
 		    <!-- /header -->
 	    </div>
 	    <!-- /row -->
-	
-<!--
-						<a href="<?php echo home_url(); ?>">
-							<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">
-						</a>
--->
-
