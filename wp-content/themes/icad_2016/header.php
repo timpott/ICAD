@@ -34,24 +34,27 @@
 				    <nav class="sub-nav pull-right">
 					    <ul>
 						    <li><a href="#">Login</a></li>
-						    <li><a href="#">Search</a></li>
-						    <li><a href="#">Cart</a></li>
-						    <li><a href="#" target="_blank">Facebook</a></li>
-						    <li><a href="#" target="_blank">Twitter</a></li>
-						    <li><a href="#" target="_blank">Linkedin</a></li>
+						    <li class=""><a href="#">Search</a></li>
+						    <li class=""><a href="#">Cart</a></li>
+						    <li class=""><a href="#" target="_blank">Facebook</a></li>
+						    <li class=""><a href="#" target="_blank">Twitter</a></li>
+						    <li class=""><a href="#" target="_blank">Linkedin</a></li>
 					    </ul>
 				    </nav>
 			    </div>
 			    
 			    <div class="col-lg-8">
 				    <a href="<?php echo home_url(); ?>">
-			    		<img class="loader" data-src="<?php echo get_template_directory_uri(); ?>/includes/img/icons/logo.svg" alt="ICAD Logo" class="logo-img" />
-			    		<noscript><img src="<?php echo get_template_directory_uri(); ?>/includes/img/icons/logo.svg"></noscript>
+					    <!-- Logo with PNG noscript fallback, all images with class of loader require noscript PNG fallback -->
+			    		<img class="loader logo-img" data-src="<?php echo get_template_directory_uri(); ?>/includes/img/icons/logo.svg" alt="ICAD Logo" />
+			    		<noscript><img class="logo-img" src="<?php echo get_template_directory_uri(); ?>/includes/img/icons/logo.png"></noscript>
 			    	</a>
 			    </div>
 			    
 			    <div class="col-lg-8">
-				    <p>Hero</p>
+				    	<!-- Hero image with PNG noscript fallback -->
+				    	<img class="loader hero-img" data-src="<?php echo get_template_directory_uri(); ?>/includes/img/icons/institute-of-creative.svg" alt="Institute of creative advertising and design" />
+				    	<noscript><img class="hero-img" src="<?php echo get_template_directory_uri(); ?>/includes/img/icons/institute-of-creative.png"></noscript>
 			    </div> 
 			    
 			    <div class="clearfix"></div>

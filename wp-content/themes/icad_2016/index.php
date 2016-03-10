@@ -111,7 +111,7 @@
 		<section class="key-dates">
 			<div class="row"> 
 			 	<div class="col-lg-4">
-				 	<h2>Key Dates</h2>
+				 	<h2>Key<br/> Dates</h2>
 			 	</div>
 			 	
 			 	<?php while( have_rows('key_dates', 'options') ): the_row();
@@ -124,26 +124,24 @@
 				  	  $text = get_sub_field('event_intro');
 				  	  $link = get_sub_field('link'); 
 				  	  
+				  	  $text = substr($text, 0, 100);
+				  	  
 				  	  ?>
 				  	
 				  	  <div class="col-lg-4">
+					  	 <center>
 					  	 <?php 
-						  	if($date) {
-				  	 	 		echo '<p><small>' . $date . '</small></p>';
-				  	 	 	}
-				  	 	 	if($time) {
-				  	 	 		echo '<p><small>' . $time  . '</small></p>';
-				  	 	 	}
-				  	 	 	if($title) {
-				  	 	 		echo '<h4>' . $title  . '</h4>';
-				  	 	 	}
-				  	 	 	if($text) {
-				  	 	 		echo '<p>' . $text  . '</p>';
-				  	 	 	}
-				  	 	 	if($link) {
-				  	 	 		echo '<p><a href="' . $link . '">Enter Today</a></p>';
-				  	 	 	}
+				  	 	 	echo '<p><small>' . $date . '</small></p>';
+				  	 	 	
+				  	 	 	echo '<p><small>' . $time  . '</small></p>';
+				  	 	 	
+				  	 	 	echo '<h4>' . $title  . '</h4>';
+
+				  	 	 	echo '<p>' . $text  . '</p>';
+
+				  	 	 	echo '<p><a href="' . $link . '">Enter Today</a></p>';
 				  	 	 ?>
+					  	 </center>
 				  	  </div>
 			  
 			 <?php $i++; ?>  

@@ -12,7 +12,7 @@ $( document ).ready(function() {
 		scrollDirection: 'vertical',
 		effect: 'fadeIn',
 		effectTime: 1000,
-		threshold: 500,
+		threshold: 200,
 		visibleOnly: true,
 		enableThrottle: true,
 		throttle: 250,
