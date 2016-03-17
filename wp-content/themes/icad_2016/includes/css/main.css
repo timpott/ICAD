@@ -67,7 +67,7 @@ hr {
   float: left; }
 
 .page-title {
-  font-size: 72px; }
+  font-size: 69px; }
 
 hr.alt-01 {
   margin: 0;
@@ -82,6 +82,41 @@ hr.alt-01 {
 .no-svg .svg-fallback {
   background: url("../img/icons/graphic.png"); }
 
+section,
+main {
+  width: 100%;
+  float: left;
+  display: block; }
+
+/* Dev Stuff 7/3/16 */
+.home-box {
+  height: 210px;
+  background-color: none;
+  border: 1px solid #333; }
+
+.home-box.large {
+  height: 260px;
+  background-color: #ffc3ad; }
+
+.home-box.c-01 {
+  height: 260px;
+  background-color: #00ffdc; }
+
+.home-box.c-02 {
+  height: 260px;
+  background-color: #ffa19f; }
+
+.home-box.c-03 {
+  height: 260px;
+  background-color: #cfa1f3; }
+
+.home-box-inner {
+  height: 195px;
+  background-color: #000000; }
+
+/*------------------------------------------------
+	Header Styles
+------------------------------------------------*/
 .top-bar {
   background-color: #ffebc9;
   height: 10px; }
@@ -111,85 +146,9 @@ header[role="banner"] .nav ul {
       font-family: "Karla", Helvetica, Arial, sans-serif;
       font-weight: bold; }
 
-.top-border {
-  border-top: 3px solid #000;
-  padding-top: 30px; }
-
-.sidebar .menu-header {
-  padding-bottom: 20px;
-  border-bottom: 3px solid #000; }
-
-.sidebar .sidebar-nav ul {
-  padding-left: 0; }
-  .sidebar .sidebar-nav ul li {
-    width: 100%;
-    list-style: none;
-    border-bottom: 3px solid #000; }
-    .sidebar .sidebar-nav ul li a {
-      display: block;
-      padding: 20px 0; }
-
-#contact {
-  margin-bottom: 30px; }
-  #contact .newsletter {
-    background-color: #000;
-    padding: 30px;
-    color: #ffffff; }
-    #contact .newsletter h4 {
-      font-size: 24px;
-      margin: 0;
-      padding: 0;
-      padding-bottom: 20px;
-      font-family: "Karla", Helvetica, Arial, sans-serif; }
-    #contact .newsletter .wpcf7-form p {
-      padding-bottom: 0; }
-    #contact .newsletter input[type=text],
-    #contact .newsletter input[type=email] {
-      border: 1px solid #777777;
-      width: 100%;
-      background-color: transparent;
-      height: 50px;
-      padding: 10px;
-      margin-bottom: 20px; }
-      #contact .newsletter input[type=text]:focus,
-      #contact .newsletter input[type=email]:focus {
-        outline: none;
-        border: 1px solid #fff; }
-    #contact .newsletter input::-webkit-input-placeholder {
-      color: #777777; }
-    #contact .newsletter input:-moz-placeholder {
-      color: #777777; }
-    #contact .newsletter input::-moz-placeholder {
-      color: #777777; }
-    #contact .newsletter input:-ms-input-placeholder {
-      color: #777777; }
-    #contact .newsletter input:focus::-webkit-input-placeholder {
-      color: transparent; }
-    #contact .newsletter input:focus:-moz-placeholder {
-      color: transparent; }
-    #contact .newsletter input:focus::-moz-placeholder {
-      color: transparent; }
-    #contact .newsletter input:focus:-ms-input-placeholder {
-      color: transparent; }
-    #contact .newsletter input[type=submit] {
-      border: 2px solid #fff;
-      color: #fff;
-      background-color: transparent;
-      padding: 5px 10px; }
-  #contact .social .social-nav ul {
-    padding-left: 0; }
-    #contact .social .social-nav ul li {
-      background-color: #000;
-      width: 100%;
-      list-style: none;
-      margin-bottom: 20px; }
-      #contact .social .social-nav ul li a {
-        text-align: center;
-        display: block;
-        color: #fff;
-        padding: 30px 0;
-        height: 80px; }
-
+/*------------------------------------------------
+	Footer Styles
+------------------------------------------------*/
 .partners {
   padding: 40px 0;
   background-color: #ffc3ad; }
@@ -288,45 +247,26 @@ footer[role="contentinfo"] {
       footer[role="contentinfo"] .sponsors img:hover {
         opacity: 1; }
 
-/*
-footer,
-.sponsors {
-	background: {
-		color: #000;
-	}
-}
-*/
-section,
-main {
-  width: 100%;
-  float: left;
-  display: block; }
+/*------------------------------------------------
+	Sidebar Styles
+------------------------------------------------*/
+.top-border {
+  border-top: 3px solid #000;
+  padding-top: 30px; }
 
-/* Dev Stuff 7/3/16 */
-.home-box {
-  height: 210px;
-  background-color: none;
-  border: 1px solid #333; }
+.sidebar .menu-header {
+  padding-bottom: 20px;
+  border-bottom: 3px solid #000; }
 
-.home-box.large {
-  height: 260px;
-  background-color: #ffc3ad; }
-
-.home-box.c-01 {
-  height: 260px;
-  background-color: #00ffdc; }
-
-.home-box.c-02 {
-  height: 260px;
-  background-color: #ffa19f; }
-
-.home-box.c-03 {
-  height: 260px;
-  background-color: #cfa1f3; }
-
-.home-box-inner {
-  height: 195px;
-  background-color: #000000; }
+.sidebar .sidebar-nav ul {
+  padding-left: 0; }
+  .sidebar .sidebar-nav ul li {
+    width: 100%;
+    list-style: none;
+    border-bottom: 3px solid #000; }
+    .sidebar .sidebar-nav ul li a {
+      display: block;
+      padding: 20px 0; }
 
 /*------------------------------------------------
 	Event Styles
@@ -334,6 +274,70 @@ main {
 .event .img-wrapper img {
   width: 100%;
   height: auto; }
+
+/*------------------------------------------------
+	Contact Page Styles
+------------------------------------------------*/
+#contact {
+  margin-bottom: 30px; }
+  #contact .newsletter {
+    background-color: #000;
+    padding: 30px;
+    color: #ffffff; }
+    #contact .newsletter h4 {
+      font-size: 24px;
+      margin: 0;
+      padding: 0;
+      padding-bottom: 20px;
+      font-family: "Karla", Helvetica, Arial, sans-serif; }
+    #contact .newsletter .wpcf7-form p {
+      padding-bottom: 0; }
+    #contact .newsletter input[type=text],
+    #contact .newsletter input[type=email] {
+      border: 1px solid #777777;
+      width: 100%;
+      background-color: transparent;
+      height: 50px;
+      padding: 10px;
+      margin-bottom: 20px; }
+      #contact .newsletter input[type=text]:focus,
+      #contact .newsletter input[type=email]:focus {
+        outline: none;
+        border: 1px solid #fff; }
+    #contact .newsletter input::-webkit-input-placeholder {
+      color: #777777; }
+    #contact .newsletter input:-moz-placeholder {
+      color: #777777; }
+    #contact .newsletter input::-moz-placeholder {
+      color: #777777; }
+    #contact .newsletter input:-ms-input-placeholder {
+      color: #777777; }
+    #contact .newsletter input:focus::-webkit-input-placeholder {
+      color: transparent; }
+    #contact .newsletter input:focus:-moz-placeholder {
+      color: transparent; }
+    #contact .newsletter input:focus::-moz-placeholder {
+      color: transparent; }
+    #contact .newsletter input:focus:-ms-input-placeholder {
+      color: transparent; }
+    #contact .newsletter input[type=submit] {
+      border: 2px solid #fff;
+      color: #fff;
+      background-color: transparent;
+      padding: 5px 10px; }
+  #contact .social .social-nav ul {
+    padding-left: 0; }
+    #contact .social .social-nav ul li {
+      background-color: #000;
+      width: 100%;
+      list-style: none;
+      margin-bottom: 20px; }
+      #contact .social .social-nav ul li a {
+        text-align: center;
+        display: block;
+        color: #fff;
+        padding: 30px 0;
+        height: 80px; }
 
 /*------------------------------------------------
 	HTML5-bp browser upgrade

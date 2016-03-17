@@ -1,0 +1,35 @@
+@import "../bootstrap/variables";
+
+/*------------------------------------------------
+	Sidebar Styles
+------------------------------------------------*/
+
+.top-border {
+	border-top: 3px solid #000;
+	padding-top: 30px;
+}
+
+.sidebar {
+	
+	.menu-header {
+		padding-bottom: 20px;
+		border-bottom: 3px solid #000;
+	}
+	
+	.sidebar-nav {
+	
+		ul {
+		padding-left: 0;
+			li {
+				width: 100%;
+				list-style: none;
+				border-bottom: 3px solid #000;
+				
+				a {
+					display: block;
+					padding: 20px 0;
+				}
+			}
+		}
+	}	
+}
