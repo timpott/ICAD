@@ -61,6 +61,10 @@ hr {
 	float: left;
 }
 
+.page-title {
+	font-size: 69px;
+}
+
 
 // Footer hr on black 
 hr.alt-01 {
@@ -130,6 +134,116 @@ header[role="banner"] {
 .key-dates {
 }
 
+.top-border {
+	border-top: 3px solid #000;
+	padding-top: 30px;
+}
+
+.sidebar {
+	
+	.menu-header {
+		padding-bottom: 20px;
+		border-bottom: 3px solid #000;
+	}
+	
+	.sidebar-nav {
+	
+		ul {
+		padding-left: 0;
+			li {
+				width: 100%;
+				list-style: none;
+				border-bottom: 3px solid #000;
+				
+				a {
+					display: block;
+					padding: 20px 0;
+				}
+			}
+		}
+	}	
+}
+
+#contact {	
+	margin-bottom: 30px;
+	.newsletter {
+		background-color: $gray-base;
+		padding: 30px;
+		color: $brand-light;
+				
+		h4 {
+			font-size: 24px;
+			margin: 0;
+			padding: 0;
+			padding-bottom: 20px;
+			font: {
+				family: $font-family-sans-serif;
+			}		
+		}
+		
+		.wpcf7-form {
+			p {
+				padding-bottom: 0;
+			}
+		}
+		
+		input[type=text],
+		input[type=email] {
+			border: 1px solid $gray-light;
+			width: 100%;
+			background-color: transparent;
+			height: 50px;
+			padding: 10px;
+			margin-bottom: 20px;
+			
+			&:focus {
+				outline: none;
+				border: 1px solid #fff;
+			}
+		}
+		
+		input::-webkit-input-placeholder { color: $gray-light; }	
+		input:-moz-placeholder { color: $gray-light; }
+		input::-moz-placeholder { color: $gray-light; }
+		input:-ms-input-placeholder { color: $gray-light; }
+		
+		input:focus::-webkit-input-placeholder { color:transparent; }
+		input:focus:-moz-placeholder { color:transparent; }
+		input:focus::-moz-placeholder { color:transparent; }
+		input:focus:-ms-input-placeholder { color:transparent; }
+		
+		input[type=submit] {
+			border: 2px solid #fff;
+			color: #fff;
+			background-color: transparent;
+			padding: 5px 10px;
+		}
+	}
+	
+	.social {
+		.social-nav {
+			ul {
+				padding-left: 0;
+				
+				li {
+					background-color: $gray-base;
+					width: 100%;
+					list-style: none;
+					margin-bottom: 20px;
+					
+					a {
+						text-align: center;	
+						display: block;
+						color: #fff;
+						padding: 30px 0;
+						height: 80px;
+					}
+				}
+			}
+		}
+	}
+}
+
 .partners {
 	padding: 40px 0;
 	background: {
@@ -181,7 +295,7 @@ footer[role="contentinfo"] {
 	input:focus:-ms-input-placeholder { color:transparent; }
 	
 	input[type=submit] {
-		border: 1px solid #fff;
+		border: 2px solid #fff;
 		color: #fff;
 		background-color: transparent;
 		padding: 5px 10px;

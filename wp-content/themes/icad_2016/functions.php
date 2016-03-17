@@ -398,6 +398,44 @@ add_shortcode('html5_shortcode_demo_2', 'html5_shortcode_demo_2'); // Place [htm
 	Custom Post Types
 \*------------------------------------*/
 
+function codex_custom_init() {
+ $labels = array(
+    'name' => _x('Events', 'post type general name'),
+    'singular_name' => _x('Event', 'post type singular name'),
+    'add_new' => _x('Add New', 'Event'),
+    'add_new_item' => __('Add Event'),
+    'edit_item' => __('Edit Event'),
+    'new_item' => __('New Event'),
+    'all_items' => __('All Events'),
+    'view_item' => __('View Event'),
+    'search_items' => __('Search Events'),
+    'not_found' =>  __('No Event found'),
+    'not_found_in_trash' => __('No Event found in Trash'),
+    'parent_item_colon' => '',
+    'menu_name' => __('Events')
+ );
+ 
+  $args = array(
+    'labels' => $labels,
+    'taxonomies' => array('category'),
+    'public' => true,
+    'publicly_queryable' => true,
+    'show_ui' => true,
+    'show_in_menu' => true,
+    'query_var' => true,
+    'rewrite' => true,
+    'exclude_from_search' => false,
+    'capability_type' => 'post',
+    'has_archive' => true,
+    'hierarchical' => false,
+    'menu_position' => null,
+    'slug' => '',
+    'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'revisions', 'excerpt', 'page-attributes')
+  );
+register_post_type('event',$args); 
+}
+add_action( 'init', 'codex_custom_init' );
+
 /*------------------------------------*\
 	ShortCode Functions
 \*------------------------------------*/
