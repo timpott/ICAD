@@ -1,0 +1,135 @@
+@import "../bootstrap/variables";
+
+/*------------------------------------------------
+	Page Content
+------------------------------------------------*/
+
+#content {
+	border-top: 2px solid #000;
+	
+	.title-wrapper {
+		padding: 30px 0;
+	}
+	
+	.page-title {
+		font-size: 69px;
+		margin: 0;
+	}
+	
+	.sub-title {
+		font: {
+			size: 36px;
+			family: $font-family-serif-light;
+			weight: normal;
+		}
+		margin: 0;
+	}
+	
+	img {
+		width: 100%;
+		height: auto;
+		margin: 0 0 30px 0;
+	}
+	
+	.intro-text {
+		font: {
+			size: 34px;
+		}
+		line-height: 41px;
+		padding: 0 0 30px 0;
+	}
+	
+	.btn {
+		display: inline-block;
+		margin: 0 0 30px 0;
+		padding: 0;
+		border: 2px solid #000;
+		border-radius: 0;
+		padding: 5px;
+		font: {
+			size: 16px;
+		}
+	}
+	
+	.key-date-module {		
+	margin-bottom: 30px;	
+		h3 {
+			font: {
+				size: 39px;
+			}
+			border-top: 2px solid #000;
+			border-bottom: 2px solid #000;
+			margin: 0;
+			padding: 30px 0;
+		}
+		
+		small {
+			font: {
+				size: 16px;
+				family: $font-family-sans-serif;
+				weight: bold;
+			}
+		}
+		
+		h4 {
+			font: {
+				size: 24px;
+				family: $font-family-serif;
+			}
+			margin: 0;
+		}
+		
+		p {
+			margin: 0;
+		}
+		
+		// Horrible bootstrap row fix
+		.inner {
+			display: inline-block;
+			padding: 20px 0;
+			margin-left: 20px;
+			margin-right: 20px;
+			border-bottom: 2px solid #000;
+			
+			.col-lg-6 {
+				padding-left: 0;
+			}
+			
+			.col-lg-10 {
+				padding-right: 20px;
+			}
+		}
+	}
+	
+	.faq-module {
+		h3 {
+			font: {
+				size: 48px;
+			}
+			border-top: 2px solid #000;
+			border-bottom: 2px solid #000;
+			margin: 0;
+			padding: 30px 0;
+			margin-bottom: 30px;
+		}
+		
+		h4 {
+			font: {
+				size: 34px;
+			}
+			margin: 0;
+			padding-bottom: 5px;
+		}
+		
+		p {
+			margin: 0;
+			font: {
+				style: italic;
+			}
+		}
+		
+		.inner {
+			padding: 0 0 30px 0;
+		}
+	}
+}

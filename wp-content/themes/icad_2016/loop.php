@@ -1,43 +1,94 @@
-<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+<?php 
+	
+	// Display Page Title
+	$page_title = get_the_title();
+	echo '<div class="title-wrapper">';
+	echo 	'<h1 class="page-title">' . $page_title . '</h1>';
+	
+	// Flexible Content Loop
+	if(have_rows('flexible_content')):
+		// loop through the rows of data
+		while ( have_rows('flexible_content') ) : the_row();
+		
+			if(get_row_layout() == 'sub_title'):
+				$sub_title = get_sub_field('sub_title_f01');
+				echo 	'<p class="sub-title">' . $sub_title . '</p>';
+				echo '</div>'; // title-wrapper close
+				
+			elseif(get_row_layout() == 'hero_introduction'):	
+				$introduction_text = get_sub_field('hero_introduction_f01');
+				echo '<h3 class="intro-text">' . $introduction_text . '</h3>';
+				
+			elseif(get_row_layout() == 'hero_image'):
+				$hero_image = get_sub_field('hero_image_f01');
+				if( !empty($hero_image)): 	
+					echo wp_get_attachment_image($hero_image);
+				endif;
+				
+			elseif(get_row_layout() == 'call_to_action'):
+				$link_url = get_sub_field('link_f01');
+				$text_url = get_sub_field('text_f01');
+				echo '<a class="btn" href="' . $link_url . '">' . $text_url . '</a>';
+				
+			elseif(get_row_layout() == 'key_dates'):
+				$key_title = get_sub_field('key_date_header');
+				
+				echo '<div class="key-date-module">';
+				echo 	'<h3>' . $key_title . '</h3>';
+				echo 	'<div class="row">';
+				
+				if(have_rows('key_dates_f01')):
+			    	while ( have_rows('key_dates_f01') ) : the_row();
+			    	$key_date = get_sub_field('date');
+			    	$key_date_title = get_sub_field('title');
+			    	$key_date_content = get_sub_field('content');
+					
+					echo 	'<div class="inner">';
+			    	echo 		'<div class="col-lg-6">';
+			    	echo 			'<small>' . $key_date . '</small>';
+			    	echo    		'<h4>' . $key_date_title . '</h4>';
+			    	echo 		'</div>';
+			    	
+			    	echo    	'<div class="col-lg-10">';
+			    	echo 			'<p>' . $key_date_content . '</p>';
+			    	echo 		'</div>';
+			    	echo 	'</div>';
+			    	
+					endwhile;
+				endif;
+				
+ 				echo 	'</div>';
+				echo '</div>';
+				
+			elseif(get_row_layout() == 'faq'):
+				$faq_title = get_sub_field('faq_title');
+				
+				echo '<div class="faq-module">';
+				echo 	'<h3>' . $faq_title . '</h3>';
 
-	<!-- article -->
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				
+				if(have_rows('faqs')):
+			    	while ( have_rows('faqs') ) : the_row();
+			    	$faq_title = get_sub_field('heading');
+			    	$faq_content = get_sub_field('content');
+					
+					echo 	'<div class="inner">';
+			    	echo 		'<h4>' . $faq_title . '</h4>';		
+			    	echo 		'<p>' . $faq_content . '</p>';
+			    	echo 	'</div>';
+			    	
+					endwhile;
+				endif;
 
-		<!-- post thumbnail -->
-		<?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
-			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-				<?php the_post_thumbnail(array(120,120)); // Declare pixel size you need inside the array ?>
-			</a>
-		<?php endif; ?>
-		<!-- /post thumbnail -->
+				echo '</div>';
 
-		<!-- post title -->
-		<h2>
-			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-		</h2>
-		<!-- /post title -->
-
-		<!-- post details -->
-		<span class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span>
-		<span class="author"><?php _e( 'Published by', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
-		<span class="comments"><?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span>
-		<!-- /post details -->
-
-		<?php html5wp_excerpt('html5wp_index'); // Build your custom callback length in functions.php ?>
-
-		<?php edit_post_link(); ?>
-
-	</article>
-	<!-- /article -->
-
-<?php endwhile; ?>
-
-<?php else: ?>
-
-	<!-- article -->
-	<article>
-		<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
-	</article>
-	<!-- /article -->
-
-<?php endif; ?>
+					
+			endif;
+			
+		endwhile;
+		
+		else:
+		// No layouts found
+	endif;
+	
+?>

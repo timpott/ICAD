@@ -477,18 +477,21 @@ function alter_att_attributes_wpse_102079($attr) {
 	
 add_filter( 'wp_get_attachment_image_attributes', 'alter_att_attributes_wpse_102079');
 
+function wpb_list_child_pages() { 
 
-/* Add Data-src to wp_get_attachment_image */
-/*
-function alter_att_attributes_wpse_102079($attr) {
-  $attr['data-src'] = $attr['src'];
-  $classes = $attr['class'];
-  $classes = $classes . ' loader';
-  $attr['class'] = $classes;
-  return $attr;
+	global $post; 
+
+	if (is_page() && $post->post_parent)	
+		$childpages = wp_list_pages( 'sort_column=menu_order&title_li=&child_of=' . $post->post_parent . '&echo=0' );
+	else
+		$childpages = wp_list_pages( 'sort_column=menu_order&title_li=&child_of=' . $post->ID . '&echo=0' );
+	if ($childpages) {
+		$string = '<ul>' . $childpages . '</ul>';
+	}
+	
+	return $string;
 }
-add_filter( 'wp_get_attachment_image_attributes', 'alter_att_attributes_wpse_102079');
-*/
 
+add_shortcode('wpb_childpages', 'wpb_list_child_pages');
 
 ?>

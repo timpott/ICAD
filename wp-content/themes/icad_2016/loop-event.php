@@ -1,15 +1,9 @@
-<?php get_header();
-	
+<?php	
 	// Get current date
 	$current_date_unix = date('U');
 	
 	if (have_posts()): while (have_posts()) : the_post();
-	
-		echo '<div class="row">';
-			
-			echo '<div class="col-lg-4">';
-			echo '</div>';
-		
+				
 			echo '<div class="col-lg-12">';
 			
 				echo '<section id="content" class="event" role="main">';
@@ -102,8 +96,6 @@
 					
 					endwhile;
 				echo '</section>';
-			echo '</div>';
 		echo '</div>';
     endif;
-    
-get_footer(); ?>
+?>

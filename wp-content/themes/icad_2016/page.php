@@ -1,45 +1,23 @@
-<?php get_header(); ?>
+<?php get_header();
+	
+	if (have_posts()): 
+		while (have_posts()) : the_post();
+		
+		echo '<div class="row">';
+		echo 	'<div class="col-lg-4">';
+		echo		'<aside id="sidebar">';
+		echo			get_sidebar();
+		echo     	'</aside>';
+		echo 	'</div>';
+		
+		echo 	'<div class="col-lg-12">';
+		echo		'<section id="content" role="main">';
+		echo			get_template_part('loop');
+		echo    	'</section>';
+		echo 	'</div>';
+		echo '</div>';
+		
+		endwhile;
+	endif;
 
-	<main role="main">
-		<!-- section -->
-		<section>
-
-			<h1><?php the_title(); ?></h1>
-
-		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
-
-			<!-- article -->
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-				<?php the_content(); ?>
-
-				<?php comments_template( '', true ); // Remove if you don't want comments ?>
-
-				<br class="clear">
-
-				<?php edit_post_link(); ?>
-
-			</article>
-			<!-- /article -->
-
-		<?php endwhile; ?>
-
-		<?php else: ?>
-
-			<!-- article -->
-			<article>
-
-				<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
-
-			</article>
-			<!-- /article -->
-
-		<?php endif; ?>
-
-		</section>
-		<!-- /section -->
-	</main>
-
-<?php get_sidebar(); ?>
-
-<?php get_footer(); ?>
+get_footer(); ?>

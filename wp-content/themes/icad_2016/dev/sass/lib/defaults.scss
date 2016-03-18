@@ -80,6 +80,10 @@ hr.alt-01 {
 .svg .svg-fallback {background:url('../img/icons/graphic.svg');}
 .no-svg .svg-fallback {background:url('../img/icons/graphic.png');}
 
+/*------------------------------------------------
+	Globals
+------------------------------------------------*/
+
 section,
 main {
 	@include block-reset;
