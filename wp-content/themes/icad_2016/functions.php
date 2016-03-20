@@ -31,6 +31,7 @@ if (function_exists('add_theme_support'))
     add_image_size('medium', 250, '', true); // Medium Thumbnail
     add_image_size('small', 120, '', true); // Small Thumbnail
     add_image_size('partner', 220, '', true); // Partner Logo
+    add_image_size('upstart', 240, 180, true); // Partner Logo
     add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
 
     // Add Support for Custom Backgrounds - Uncomment below if you're going to use
@@ -101,6 +102,9 @@ function html5blank_header_scripts()
         
         wp_register_script('modernizr', get_template_directory_uri() . '/includes/js/modernizr-2.8.3.min.js', array(), '2.8.3');
         wp_enqueue_script('modernizr'); // Enqueue it!
+        
+        wp_register_script('slider', get_template_directory_uri() . '/includes/js/slick.min.js', array(), '1.5.9');
+        wp_enqueue_script('slider'); // Enqueue it!
         
         wp_register_script('lazyload', get_template_directory_uri() . '/includes/js/jquery.lazy.min.js', array(), '1.6.5');
         wp_enqueue_script('lazyload'); // Enqueue it!
@@ -395,6 +399,44 @@ add_shortcode('html5_shortcode_demo_2', 'html5_shortcode_demo_2'); // Place [htm
 // [html5_shortcode_demo] [html5_shortcode_demo_2] Here's the page title! [/html5_shortcode_demo_2] [/html5_shortcode_demo]
 
 /*------------------------------------*\
+	Custom Taxonomy
+\*------------------------------------*/
+
+//hook into the init action and call create_book_taxonomies when it fires
+add_action( 'init', 'create_years_hierarchical_taxonomy', 0 );
+
+//create a custom taxonomy name it topics for your posts
+function create_years_hierarchical_taxonomy() {
+
+// Add new taxonomy, make it hierarchical like categories
+//first do the translations part for GUI
+
+  $labels = array(
+    'name' => _x( 'Years', 'taxonomy general name' ),
+    'singular_name' => _x( 'Year', 'taxonomy singular name' ),
+    'search_items' =>  __( 'Search Years' ),
+    'all_items' => __( 'All Years' ),
+    'parent_item' => __( 'Parent Year' ),
+    'parent_item_colon' => __( 'Parent Year:' ),
+    'edit_item' => __( 'Edit Year' ), 
+    'update_item' => __( 'Update Year' ),
+    'add_new_item' => __( 'Add New Year' ),
+    'new_item_name' => __( 'New Year' ),
+    'menu_name' => __( 'Years' ),
+  ); 	
+
+  register_taxonomy('years',array('upstart'), array(
+    'hierarchical' => true,
+    'labels' => $labels,
+    'show_ui' => true,
+    'show_admin_column' => true,
+    'query_var' => true,
+    'rewrite' => array( 'slug' => 'year' ),
+  ));
+
+}
+
+/*------------------------------------*\
 	Custom Post Types
 \*------------------------------------*/
 
@@ -433,6 +475,41 @@ function codex_custom_init() {
     'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'revisions', 'excerpt', 'page-attributes')
   );
 register_post_type('event',$args); 
+
+$labels = array(
+    'name' => _x('Upstarts', 'post type general name'),
+    'singular_name' => _x('Upstart', 'post type singular name'),
+    'add_new' => _x('Add New', 'Upstart'),
+    'add_new_item' => __('Add Upstart'),
+    'edit_item' => __('Edit Upstart'),
+    'new_item' => __('New Upstart'),
+    'all_items' => __('All Upstarts'),
+    'view_item' => __('View Upstart'),
+    'search_items' => __('Search Upstarts'),
+    'not_found' =>  __('No Upstart found'),
+    'not_found_in_trash' => __('No Upstart found in Trash'),
+    'parent_item_colon' => '',
+    'menu_name' => __('Upstarts')
+ );
+ 
+  $args = array(
+    'labels' => $labels,
+    'taxonomies' => array(''),
+    'public' => true,
+    'publicly_queryable' => true,
+    'show_ui' => true,
+    'show_in_menu' => true,
+    'query_var' => true,
+    'rewrite' => true,
+    'exclude_from_search' => false,
+    'capability_type' => 'post',
+    'has_archive' => true,
+    'hierarchical' => false,
+    'menu_position' => null,
+    'slug' => '',
+    'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'revisions', 'excerpt', 'page-attributes')
+  );
+register_post_type('upstart',$args); 
 }
 add_action( 'init', 'codex_custom_init' );
 
@@ -493,5 +570,37 @@ function wpb_list_child_pages() {
 }
 
 add_shortcode('wpb_childpages', 'wpb_list_child_pages');
+
+add_action('restrict_manage_posts', 'tsm_filter_post_type_by_taxonomy');
+function tsm_filter_post_type_by_taxonomy() {
+	global $typenow;
+	$post_type = 'upstart';
+	$taxonomy  = 'years';
+	if ($typenow == $post_type) {
+		$selected      = isset($_GET[$taxonomy]) ? $_GET[$taxonomy] : '';
+		$info_taxonomy = get_taxonomy($taxonomy);
+		wp_dropdown_categories(array(
+			'show_option_all' => __("Show All {$info_taxonomy->label}"),
+			'taxonomy'        => $taxonomy,
+			'name'            => $taxonomy,
+			'orderby'         => 'name',
+			'selected'        => $selected,
+			'show_count'      => true,
+			'hide_empty'      => true,
+		));
+	};
+}
+
+add_filter('parse_query', 'tsm_convert_id_to_term_in_query');
+function tsm_convert_id_to_term_in_query($query) {
+	global $pagenow;
+	$post_type = 'upstart';
+	$taxonomy  = 'years'; 
+	$q_vars    = &$query->query_vars;
+	if ( $pagenow == 'edit.php' && isset($q_vars['post_type']) && $q_vars['post_type'] == $post_type && isset($q_vars[$taxonomy]) && is_numeric($q_vars[$taxonomy]) && $q_vars[$taxonomy] != 0 ) {
+		$term = get_term_by('id', $q_vars[$taxonomy], $taxonomy);
+		$q_vars[$taxonomy] = $term->slug;
+	}
+}
 
 ?>

@@ -8,6 +8,12 @@ $( document ).ready(function() {
 	    });
 	}
 	
+/*
+	$('.hero-slider').slick({
+		lazyLoad: 'ondemand'
+   	});
+*/
+   		
 	$('.loader').lazy({
 		scrollDirection: 'vertical',
 		effect: 'fadeIn',

@@ -25,6 +25,20 @@
 					echo wp_get_attachment_image($hero_image);
 				endif;
 				
+/*
+			elseif(get_row_layout() == 'hero_slider'):
+				if( have_rows('slides')):
+					echo '<ul class="hero-slider">';
+					while (have_rows('slides')) : the_row();
+						$slide_image = get_sub_field('slide');
+							
+						echo '<li><img data-lazy="' . $slide_image['url'] . '" alt="' . $slide_image['alt'] . '" /></li>';
+					endwhile;
+						
+					echo '</ul>';
+				endif;
+*/
+				
 			elseif(get_row_layout() == 'call_to_action'):
 				$link_url = get_sub_field('link_f01');
 				$text_url = get_sub_field('text_f01');
@@ -81,8 +95,13 @@
 				endif;
 
 				echo '</div>';
-
-					
+				
+			elseif(get_row_layout() == 'upstarts'):
+				echo get_template_part('loop', 'upstarts');
+			
+			elseif(get_row_layout() == 'alumni'):
+				echo get_template_part('loop', 'alumni');
+				
 			endif;
 			
 		endwhile;

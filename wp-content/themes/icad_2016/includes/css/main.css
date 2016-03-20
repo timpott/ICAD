@@ -150,6 +150,298 @@ header[role="banner"] .nav ul {
       font-weight: bold; }
 
 /*------------------------------------------------
+	Page Content
+------------------------------------------------*/
+#content {
+  border-top: 2px solid #000; }
+  #content .title-wrapper {
+    padding: 30px 0; }
+  #content .page-title {
+    font-size: 69px;
+    margin: 0; }
+  #content .sub-title {
+    font-size: 36px;
+    font-family: "gt_sectrabook", Georgia, Times, serif;
+    font-weight: normal;
+    margin: 0; }
+  #content img {
+    width: 100%;
+    height: auto;
+    margin: 0 0 30px 0; }
+  #content .intro-text {
+    font-size: 34px;
+    line-height: 41px;
+    padding: 0 0 30px 0; }
+  #content .btn {
+    display: inline-block;
+    margin: 0 0 30px 0;
+    padding: 0;
+    border: 2px solid #000;
+    border-radius: 0;
+    padding: 5px;
+    font-size: 16px; }
+  #content .key-date-module {
+    margin-bottom: 30px; }
+    #content .key-date-module h3 {
+      font-size: 39px;
+      border-top: 2px solid #000;
+      border-bottom: 2px solid #000;
+      margin: 0;
+      padding: 30px 0; }
+    #content .key-date-module small {
+      font-size: 16px;
+      font-family: "Karla", Helvetica, Arial, sans-serif;
+      font-weight: bold; }
+    #content .key-date-module h4 {
+      font-size: 24px;
+      font-family: "gt_sectrablack", Georgia, Times, serif;
+      margin: 0; }
+    #content .key-date-module p {
+      margin: 0; }
+    #content .key-date-module .inner {
+      display: inline-block;
+      padding: 20px 0;
+      margin-left: 20px;
+      margin-right: 20px;
+      border-bottom: 2px solid #000; }
+      #content .key-date-module .inner .col-lg-6 {
+        padding-left: 0; }
+      #content .key-date-module .inner .col-lg-10 {
+        padding-right: 0; }
+  #content .faq-module h3 {
+    font-size: 48px;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    margin: 0;
+    padding: 30px 0;
+    margin-bottom: 30px; }
+  #content .faq-module h4 {
+    font-size: 34px;
+    margin: 0;
+    padding-bottom: 5px; }
+  #content .faq-module p {
+    margin: 0;
+    font-style: italic; }
+  #content .faq-module .inner {
+    padding: 0 0 30px 0; }
+  #content .upstarts-module .upstart-wrapper {
+    margin-bottom: 30px; }
+  #content .upstarts-module h3 {
+    font-size: 48px;
+    padding-bottom: 30px;
+    margin: 0; }
+  #content .upstarts-module img {
+    margin-bottom: 0; }
+  #content .upstarts-module .upstart-meta {
+    background-color: #000;
+    padding: 20px 30px;
+    text-align: center;
+    left: 40px; }
+    #content .upstarts-module .upstart-meta p {
+      color: #fff;
+      margin: 0; }
+    #content .upstarts-module .upstart-meta h4 {
+      padding: 10px 0; }
+      #content .upstarts-module .upstart-meta h4 a {
+        font-size: 22px;
+        color: #fff; }
+    #content .upstarts-module .upstart-meta a {
+      color: #fff; }
+  #content .alumni-module {
+    margin-bottom: 30px; }
+    #content .alumni-module h3 {
+      font-size: 48px;
+      margin: 0;
+      padding: 30px 0;
+      border-top: 2px solid #000;
+      border-bottom: 2px solid #000;
+      margin-bottom: 30px; }
+    #content .alumni-module ul {
+      padding-left: 0;
+      padding-bottom: 0;
+      -moz-column-count: 3;
+      -moz-column-gap: 40px;
+      -webkit-column-count: 3;
+      -webkit-column-gap: 40px;
+      column-count: 3;
+      column-gap: 40px; }
+      #content .alumni-module ul li {
+        list-style: none;
+        padding-bottom: 5px; }
+        #content .alumni-module ul li h4 {
+          font-family: "gt_sectrabook", Georgia, Times, serif;
+          font-size: 24px; }
+        #content .alumni-module ul li:last-child {
+          padding-bottom: 0; }
+
+/*------------------------------------------------
+	Sidebar Styles
+------------------------------------------------*/
+.top-border {
+  border-top: 3px solid #000;
+  padding-top: 30px; }
+
+.sidebar .menu-header {
+  padding-bottom: 20px;
+  border-bottom: 3px solid #000; }
+
+.sidebar .sidebar-nav ul {
+  padding-left: 0; }
+  .sidebar .sidebar-nav ul li {
+    width: 100%;
+    list-style: none;
+    border-bottom: 3px solid #000; }
+    .sidebar .sidebar-nav ul li a {
+      display: block;
+      padding: 20px 0; }
+
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+  padding-left: 0; }
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0; }
+  .slick-list:focus {
+    outline: none; }
+  .slick-list.dragging {
+    cursor: pointer;
+    cursor: hand; }
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block; }
+  .slick-track:before, .slick-track:after {
+    content: "";
+    display: table; }
+  .slick-track:after {
+    clear: both; }
+  .slick-loading .slick-track {
+    visibility: hidden; }
+
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none; }
+  [dir="rtl"] .slick-slide {
+    float: right; }
+  .slick-slide img {
+    display: block; }
+  .slick-slide.slick-loading img {
+    display: none; }
+  .slick-slide.dragging img {
+    pointer-events: none; }
+  .slick-initialized .slick-slide {
+    display: block; }
+  .slick-loading .slick-slide {
+    visibility: hidden; }
+  .slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent; }
+
+.slick-arrow.slick-hidden {
+  display: none; }
+
+/*------------------------------------------------
+	Event Styles
+------------------------------------------------*/
+.event .img-wrapper img {
+  width: 100%;
+  height: auto; }
+
+/*------------------------------------------------
+	Contact Page Styles
+------------------------------------------------*/
+#contact {
+  margin-bottom: 30px; }
+  #contact .newsletter {
+    background-color: #000;
+    padding: 30px;
+    color: #ffffff; }
+    #contact .newsletter h4 {
+      font-size: 24px;
+      margin: 0;
+      padding: 0;
+      padding-bottom: 20px;
+      font-family: "Karla", Helvetica, Arial, sans-serif; }
+    #contact .newsletter .wpcf7-form p {
+      padding-bottom: 0; }
+    #contact .newsletter input[type=text],
+    #contact .newsletter input[type=email] {
+      border: 1px solid #777777;
+      width: 100%;
+      background-color: transparent;
+      height: 50px;
+      padding: 10px;
+      margin-bottom: 20px; }
+      #contact .newsletter input[type=text]:focus,
+      #contact .newsletter input[type=email]:focus {
+        outline: none;
+        border: 1px solid #fff; }
+    #contact .newsletter input::-webkit-input-placeholder {
+      color: #777777; }
+    #contact .newsletter input:-moz-placeholder {
+      color: #777777; }
+    #contact .newsletter input::-moz-placeholder {
+      color: #777777; }
+    #contact .newsletter input:-ms-input-placeholder {
+      color: #777777; }
+    #contact .newsletter input:focus::-webkit-input-placeholder {
+      color: transparent; }
+    #contact .newsletter input:focus:-moz-placeholder {
+      color: transparent; }
+    #contact .newsletter input:focus::-moz-placeholder {
+      color: transparent; }
+    #contact .newsletter input:focus:-ms-input-placeholder {
+      color: transparent; }
+    #contact .newsletter input[type=submit] {
+      border: 2px solid #fff;
+      color: #fff;
+      background-color: transparent;
+      padding: 5px 10px; }
+  #contact .social .social-nav ul {
+    padding-left: 0; }
+    #contact .social .social-nav ul li {
+      background-color: #000;
+      width: 100%;
+      list-style: none;
+      margin-bottom: 20px; }
+      #contact .social .social-nav ul li a {
+        text-align: center;
+        display: block;
+        color: #fff;
+        padding: 30px 0;
+        height: 80px; }
+
+/*------------------------------------------------
 	Footer Styles
 ------------------------------------------------*/
 .partners {
@@ -249,174 +541,6 @@ footer[role="contentinfo"] {
       -khtml-opacity: 0.5; }
       footer[role="contentinfo"] .sponsors img:hover {
         opacity: 1; }
-
-/*------------------------------------------------
-	Page Content
-------------------------------------------------*/
-#content {
-  border-top: 2px solid #000; }
-  #content .title-wrapper {
-    padding: 30px 0; }
-  #content .page-title {
-    font-size: 69px;
-    margin: 0; }
-  #content .sub-title {
-    font-size: 36px;
-    font-family: "gt_sectrabook", Georgia, Times, serif;
-    font-weight: normal;
-    margin: 0; }
-  #content img {
-    width: 100%;
-    height: auto;
-    margin: 0 0 30px 0; }
-  #content .intro-text {
-    font-size: 34px;
-    line-height: 41px;
-    padding: 0 0 30px 0; }
-  #content .btn {
-    display: inline-block;
-    margin: 0 0 30px 0;
-    padding: 0;
-    border: 2px solid #000;
-    border-radius: 0;
-    padding: 5px;
-    font-size: 16px; }
-  #content .key-date-module {
-    margin-bottom: 30px; }
-    #content .key-date-module h3 {
-      font-size: 39px;
-      border-top: 2px solid #000;
-      border-bottom: 2px solid #000;
-      margin: 0;
-      padding: 30px 0; }
-    #content .key-date-module small {
-      font-size: 16px;
-      font-family: "Karla", Helvetica, Arial, sans-serif;
-      font-weight: bold; }
-    #content .key-date-module h4 {
-      font-size: 24px;
-      font-family: "gt_sectrablack", Georgia, Times, serif;
-      margin: 0; }
-    #content .key-date-module p {
-      margin: 0; }
-    #content .key-date-module .inner {
-      display: inline-block;
-      padding: 20px 0;
-      margin-left: 20px;
-      margin-right: 20px;
-      border-bottom: 2px solid #000; }
-      #content .key-date-module .inner .col-lg-6 {
-        padding-left: 0; }
-      #content .key-date-module .inner .col-lg-10 {
-        padding-right: 20px; }
-  #content .faq-module h3 {
-    font-size: 48px;
-    border-top: 2px solid #000;
-    border-bottom: 2px solid #000;
-    margin: 0;
-    padding: 30px 0;
-    margin-bottom: 30px; }
-  #content .faq-module h4 {
-    font-size: 34px;
-    margin: 0;
-    padding-bottom: 5px; }
-  #content .faq-module p {
-    margin: 0;
-    font-style: italic; }
-  #content .faq-module .inner {
-    padding: 0 0 30px 0; }
-
-/*------------------------------------------------
-	Sidebar Styles
-------------------------------------------------*/
-.top-border {
-  border-top: 3px solid #000;
-  padding-top: 30px; }
-
-.sidebar .menu-header {
-  padding-bottom: 20px;
-  border-bottom: 3px solid #000; }
-
-.sidebar .sidebar-nav ul {
-  padding-left: 0; }
-  .sidebar .sidebar-nav ul li {
-    width: 100%;
-    list-style: none;
-    border-bottom: 3px solid #000; }
-    .sidebar .sidebar-nav ul li a {
-      display: block;
-      padding: 20px 0; }
-
-/*------------------------------------------------
-	Event Styles
-------------------------------------------------*/
-.event .img-wrapper img {
-  width: 100%;
-  height: auto; }
-
-/*------------------------------------------------
-	Contact Page Styles
-------------------------------------------------*/
-#contact {
-  margin-bottom: 30px; }
-  #contact .newsletter {
-    background-color: #000;
-    padding: 30px;
-    color: #ffffff; }
-    #contact .newsletter h4 {
-      font-size: 24px;
-      margin: 0;
-      padding: 0;
-      padding-bottom: 20px;
-      font-family: "Karla", Helvetica, Arial, sans-serif; }
-    #contact .newsletter .wpcf7-form p {
-      padding-bottom: 0; }
-    #contact .newsletter input[type=text],
-    #contact .newsletter input[type=email] {
-      border: 1px solid #777777;
-      width: 100%;
-      background-color: transparent;
-      height: 50px;
-      padding: 10px;
-      margin-bottom: 20px; }
-      #contact .newsletter input[type=text]:focus,
-      #contact .newsletter input[type=email]:focus {
-        outline: none;
-        border: 1px solid #fff; }
-    #contact .newsletter input::-webkit-input-placeholder {
-      color: #777777; }
-    #contact .newsletter input:-moz-placeholder {
-      color: #777777; }
-    #contact .newsletter input::-moz-placeholder {
-      color: #777777; }
-    #contact .newsletter input:-ms-input-placeholder {
-      color: #777777; }
-    #contact .newsletter input:focus::-webkit-input-placeholder {
-      color: transparent; }
-    #contact .newsletter input:focus:-moz-placeholder {
-      color: transparent; }
-    #contact .newsletter input:focus::-moz-placeholder {
-      color: transparent; }
-    #contact .newsletter input:focus:-ms-input-placeholder {
-      color: transparent; }
-    #contact .newsletter input[type=submit] {
-      border: 2px solid #fff;
-      color: #fff;
-      background-color: transparent;
-      padding: 5px 10px; }
-  #contact .social .social-nav ul {
-    padding-left: 0; }
-    #contact .social .social-nav ul li {
-      background-color: #000;
-      width: 100%;
-      list-style: none;
-      margin-bottom: 20px; }
-      #contact .social .social-nav ul li a {
-        text-align: center;
-        display: block;
-        color: #fff;
-        padding: 30px 0;
-        height: 80px; }
 
 /*------------------------------------------------
 	HTML5-bp browser upgrade
