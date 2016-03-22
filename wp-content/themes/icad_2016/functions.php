@@ -564,9 +564,8 @@ function wpb_list_child_pages() {
 		$childpages = wp_list_pages( 'sort_column=menu_order&title_li=&child_of=' . $post->ID . '&echo=0' );
 	if ($childpages) {
 		$string = '<ul>' . $childpages . '</ul>';
+		return $string;
 	}
-	
-	return $string;
 }
 
 add_shortcode('wpb_childpages', 'wpb_list_child_pages');

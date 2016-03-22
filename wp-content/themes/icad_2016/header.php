@@ -46,14 +46,14 @@
 			    <div class="col-lg-8">
 				    <a href="<?php echo home_url(); ?>">
 					    <!-- Logo with PNG noscript fallback, all images with class of loader require noscript PNG fallback -->
-			    		<img class="loader logo-img" data-src="<?php echo get_template_directory_uri(); ?>/includes/img/icons/logo.svg" alt="ICAD Logo" />
+			    		<img class="loader logo-img" data-src="<?php echo get_template_directory_uri(); ?>/includes/img/icons/logo.svg" src="<?php echo get_template_directory_uri(); ?>/includes/img/icons/loading.png" alt="ICAD Logo" />
 			    		<noscript><img class="logo-img" src="<?php echo get_template_directory_uri(); ?>/includes/img/icons/logo.png"></noscript>
 			    	</a>
 			    </div>
 			    
 			    <div class="col-lg-8">
 				    	<!-- Hero image with PNG noscript fallback -->
-				    	<img class="loader hero-img" data-src="<?php echo get_template_directory_uri(); ?>/includes/img/icons/institute-of-creative.svg" alt="Institute of creative advertising and design" />
+				    	<img class="loader hero-img" data-src="<?php echo get_template_directory_uri(); ?>/includes/img/icons/institute-of-creative.svg" src="<?php echo get_template_directory_uri(); ?>/includes/img/icons/loading.png" alt="Institute of creative advertising and design" />
 				    	<noscript><img class="hero-img" src="<?php echo get_template_directory_uri(); ?>/includes/img/icons/institute-of-creative.png"></noscript>
 			    </div> 
 			    

@@ -85,7 +85,7 @@
 								}
 							} else {								
 								if($booking_url) {
-									echo '<a class="btn" href="' . $booking_url . '" target="_blank">Book Now</a>';
+									echo '<a class="btn-icad-small" href="' . $booking_url . '" target="_blank">Book Now</a>';
 								}
 							}
 						} else {

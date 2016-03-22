@@ -1,5 +1,4 @@
-<?php
-	
+<?php	
 	echo '<aside class="sidebar" role="complementary">';
 	echo 	'<nav class="sidebar-nav" role="navigation">';
 	echo 		wpb_list_child_pages();

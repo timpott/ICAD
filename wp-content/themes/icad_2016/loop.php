@@ -25,24 +25,22 @@
 					echo wp_get_attachment_image($hero_image);
 				endif;
 				
-/*
 			elseif(get_row_layout() == 'hero_slider'):
 				if( have_rows('slides')):
 					echo '<ul class="hero-slider">';
 					while (have_rows('slides')) : the_row();
 						$slide_image = get_sub_field('slide');
 							
-						echo '<li><img data-lazy="' . $slide_image['url'] . '" alt="' . $slide_image['alt'] . '" /></li>';
+						echo '<li><img class="loader" data-src="' . $slide_image['url'] . '" alt="' . $slide_image['alt'] . '" /></li>';
 					endwhile;
 						
 					echo '</ul>';
 				endif;
-*/
 				
 			elseif(get_row_layout() == 'call_to_action'):
 				$link_url = get_sub_field('link_f01');
 				$text_url = get_sub_field('text_f01');
-				echo '<a class="btn" href="' . $link_url . '">' . $text_url . '</a>';
+				echo '<a class="btn-icad-small" href="' . $link_url . '">' . $text_url . '</a>';
 				
 			elseif(get_row_layout() == 'key_dates'):
 				$key_title = get_sub_field('key_date_header');

@@ -8,11 +8,12 @@ $( document ).ready(function() {
 	    });
 	}
 	
-/*
 	$('.hero-slider').slick({
-		lazyLoad: 'ondemand'
+		arrows: true,
+		speed: 500,
+		fade: true,
+		cssEase: 'linear'
    	});
-*/
    		
 	$('.loader').lazy({
 		scrollDirection: 'vertical',

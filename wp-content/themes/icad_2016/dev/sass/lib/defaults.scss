@@ -89,6 +89,16 @@ main {
 	@include block-reset;
 }
 
+.btn-icad-small {
+	@include icad-btn-animate;
+	@include icad-btn-base(30px, 35px, 100px);
+}
+
+.btn-icad-large {
+	@include icad-btn-animate;
+	@include icad-btn-base(30px, 120px, 210px);
+}
+
 /* Dev Stuff 7/3/16 */
 
 .home-box {

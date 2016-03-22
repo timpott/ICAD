@@ -15,3 +15,60 @@
 		color: $color;
 	}
 }
+
+@mixin icad-btn-animate {
+	@keyframes barberpole {
+		from {
+			background: {
+				position: 0 0;
+			}
+		}
+		
+		to {
+			background: {
+				position: 60px 30px;
+			}
+		}
+	}
+}
+
+@mixin icad-btn-base($line-height, $height, $width) {
+	position: relative;
+	display: inline-block;
+	border: 2px solid #000;
+	height: $height;
+	padding: 0 10px;
+	min-width: $width;
+	text-align: center;
+	background-color: #fff;
+	font-weight: bold;
+	line-height: $line-height;
+	margin: 0 0 30px 0;
+	
+	&:after {
+		-webkit-transition: all 0.3s ease; 
+		-moz-transition: all 0.3s ease; 
+		-o-transition: all 0.3s ease; 
+		transition: all 0.3s ease; 
+		content: ''; 
+		width: 100%; 
+		height: 100%; 
+		border:2px solid #000000;
+		position: absolute; 
+		bottom:-10px; 
+		left:10px; 
+		background-size: 30px 30px; 
+		background: repeating-linear-gradient(-45deg, #FFFFFF, #FFFFFF 9px, rgba(0,0,0,1) 3px, rgba(0,0,0,1) 12px); 
+		z-index: -1;
+	}
+	
+	&:hover:after {
+		animation: barberpole 2s linear infinite;
+	}
+	
+	&:hover {
+		background:#000000;
+		color:#FFFFFF;
+		text-decoration: none;
+	}
+}
