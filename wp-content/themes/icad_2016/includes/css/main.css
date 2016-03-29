@@ -260,7 +260,7 @@ header[role="banner"] .nav ul {
     font-family: "gt_sectrabook", Georgia, Times, serif;
     font-weight: normal;
     margin: 0; }
-  #content img {
+  #content img.full-width {
     width: 100%;
     height: auto;
     margin: 0 0 30px 0; }
@@ -380,27 +380,42 @@ header[role="banner"] .nav ul {
           font-size: 24px; }
         #content .alumni-module ul li:last-child {
           padding-bottom: 0; }
+  #content .page-content {
+    margin-bottom: 30px;
+    border-top: 2px solid #000;
+    padding-top: 30px; }
+    #content .page-content ul, #content .page-content ol {
+      list-style-position: inside; }
+    #content .page-content a {
+      text-decoration: underline; }
+    #content .page-content img {
+      margin: 0;
+      padding-bottom: 30px; }
+    #content .page-content img.aligncenter {
+      margin: 0 auto; }
+    #content .page-content img.alignleft {
+      padding-right: 30px;
+      padding-bottom: 10px; }
+    #content .page-content img.alignright {
+      padding-left: 30px;
+      padding-bottom: 10px; }
 
-/*------------------------------------------------
-	Sidebar Styles
-------------------------------------------------*/
-.top-border {
-  border-top: 3px solid #000;
-  padding-top: 30px; }
+.sidebar .sidebar-nav {
+  margin-bottom: 30px; }
+  .sidebar .sidebar-nav ul {
+    padding-left: 0; }
+    .sidebar .sidebar-nav ul li {
+      width: 100%;
+      list-style: none;
+      border-bottom: 3px solid #000; }
+      .sidebar .sidebar-nav ul li a {
+        display: block;
+        padding: 20px 0; }
 
-.sidebar .menu-header {
-  padding-bottom: 20px;
-  border-bottom: 3px solid #000; }
-
-.sidebar .sidebar-nav ul {
-  padding-left: 0; }
-  .sidebar .sidebar-nav ul li {
-    width: 100%;
-    list-style: none;
-    border-bottom: 3px solid #000; }
-    .sidebar .sidebar-nav ul li a {
-      display: block;
-      padding: 20px 0; }
+.sidebar img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 30px; }
 
 /* Slider */
 .slick-loading .slick-list {

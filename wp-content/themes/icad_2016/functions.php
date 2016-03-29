@@ -32,6 +32,7 @@ if (function_exists('add_theme_support'))
     add_image_size('small', 120, '', true); // Small Thumbnail
     add_image_size('partner', 220, '', true); // Partner Logo
     add_image_size('upstart', 240, 180, true); // Partner Logo
+    add_image_size('advert-large', 290, '', true); // Partner Logo
     add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
 
     // Add Support for Custom Backgrounds - Uncomment below if you're going to use
@@ -547,7 +548,7 @@ function alter_att_attributes_wpse_102079($attr) {
 	$attr['data-src'] = $attr['src']; 
 	$attr['src'] = ''. get_template_directory_uri() .'/includes/img/icons/loading.png ';
 	$classes = $attr['class'];
-	$classes = $classes . ' loader';
+	$classes = $classes . ' loader full-width';
 	$attr['class'] = $classes;
 	return $attr; 
 } 

@@ -31,7 +31,7 @@
 					while (have_rows('slides')) : the_row();
 						$slide_image = get_sub_field('slide');
 							
-						echo '<li><img class="loader" data-src="' . $slide_image['url'] . '" alt="' . $slide_image['alt'] . '" /></li>';
+						echo '<li><img class="loader full-width" data-src="' . $slide_image['url'] . '" alt="' . $slide_image['alt'] . '" /></li>';
 					endwhile;
 						
 					echo '</ul>';
@@ -99,6 +99,13 @@
 			
 			elseif(get_row_layout() == 'alumni'):
 				echo get_template_part('loop', 'alumni');
+				
+			elseif(get_row_layout() == 'content_block'):
+				$content_block = get_sub_field('content', false, false);
+				
+				echo '<div class="page-content">';
+				echo $content_block;
+				echo '</div>';
 				
 			endif;
 			
