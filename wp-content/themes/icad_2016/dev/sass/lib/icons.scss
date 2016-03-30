@@ -7,3 +7,17 @@
 
 .svg .slick-next {background: url('../img/icons/arrowright-01.svg') no-repeat center center;}
 .no-svg .slick-next {background: url('../img/icons/arrowright.png') no-repeat center center;}
+
+.svg
+	.flex-module {
+		
+		.slick-prev {
+			background: url('../img/icons/arrowleft-02.svg') no-repeat center center !important;
+			left: -5px;
+		}
+		
+		.slick-next {
+			background: url('../img/icons/arrowright-02.svg') no-repeat center center !important;
+		}
+		
+}

@@ -14,6 +14,13 @@ $( document ).ready(function() {
 		fade: true,
 		cssEase: 'linear'
    	});
+   	
+   	$('.2-col-slider .row').slick({
+		arrows: true,
+		slidesToShow: 2,
+		slidesToScroll: 1,
+		cssEase: 'linear'
+   	});
    		
 	$('.loader').lazy({
 		scrollDirection: 'vertical',

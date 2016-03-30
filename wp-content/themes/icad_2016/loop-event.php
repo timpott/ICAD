@@ -3,7 +3,10 @@
 	$current_date_unix = date('U');
 	
 	if (have_posts()): while (have_posts()) : the_post();
-				
+		echo '<div class="row">';	
+			echo '<div class="col-lg-4">';
+					get_sidebar();
+			echo '</div>';	
 			echo '<div class="col-lg-12">';
 			
 				echo '<section id="content" class="event" role="main">';
@@ -23,17 +26,19 @@
 						$closed_booking = get_field('closed_booking');
 						$description = get_the_content();
 						
-						echo '<h1 class="page-title">' . $title . '</h1>';
-						  
-						if($sub_title) {	
-						  	echo '<p class="sub-title">' . $sub_title . '</p>';
-						}
+						echo '<div class="title-wrapper">';
+							echo '<h1 class="page-title">' . $title . '</h1>';
+							  
+							if($sub_title) {	
+							  	echo '<p class="sub-title">' . $sub_title . '</p>';
+							}
+						echo '</div>';
 						
 						echo '<div class="row">';
 							echo '<div class="col-lg-5">';
 						
 								if($opening_date || $closing_date) {
-									echo '<h4>Opening</h4>';
+									echo '<h4 class="event-title">Opening</h4>';
 									echo '<p>' . $opening_date . '</p>';
 									echo '<p>' . $closing_date . '</p>';
 								}
@@ -47,7 +52,7 @@
 							
 							echo '<div class="col-lg-5">';	
 								if($venue) {
-									echo '<h4>Venue</h4>';
+									echo '<h4 class="event-title">Venue</h4>';
 									echo '<p>' . $venue . '</p>';
 								}
 							echo '</div>';
@@ -55,7 +60,7 @@
 							echo '<div class="col-lg-5">';
 								
 								if($cost) {
-									echo '<h4>Cost</h4>';
+									echo '<h4 class="event-title">Cost</h4>';
 									echo '<p>' .  $cost . '</p>'; 
 								}
 								
@@ -69,8 +74,11 @@
 							echo '</div>';
 						}
 						
+						
 						if($description) {
-							echo $description; 
+							echo '<div class="description-wrapper">';
+								echo $description; 
+							echo '</div>';
 							
 						}
 						
@@ -97,5 +105,6 @@
 					endwhile;
 				echo '</section>';
 		echo '</div>';
+	echo '</div>';
     endif;
 ?>

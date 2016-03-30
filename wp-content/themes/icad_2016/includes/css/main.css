@@ -42,6 +42,15 @@ h6 {
 .no-svg .slick-next {
   background: url("../img/icons/arrowright.png") no-repeat center center; }
 
+.svg
+.flex-module .slick-prev {
+  background: url("../img/icons/arrowleft-02.svg") no-repeat center center !important;
+  left: -5px; }
+
+.svg
+.flex-module .slick-next {
+  background: url("../img/icons/arrowright-02.svg") no-repeat center center !important; }
+
 /*------------------------------------------------
 	HTML5-bp opininated defaults
 ------------------------------------------------*/
@@ -424,17 +433,17 @@ header[role="banner"] .nav ul {
   #content .flex-module {
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;
-    padding: 30px 0 60px 0;
     position: relative;
     margin-bottom: 30px; }
+    #content .flex-module .row {
+      padding-top: 30px;
+      padding-bottom: 60px; }
+    #content .flex-module .row.slick-slider {
+      padding-bottom: 30px; }
+    #content .flex-module .slick-list {
+      height: 384px; }
     #content .flex-module .img-wrapper {
-      height: 300px;
-      min-height: 300px;
-      overflow: hidden;
       width: 95%; }
-      #content .flex-module .img-wrapper img {
-        width: 100%;
-        height: auto; }
     #content .flex-module .box-meta {
       background-color: #000;
       padding: 20px 30px;
@@ -706,9 +715,71 @@ header[role="banner"] .nav ul {
 /*------------------------------------------------
 	Event Styles
 ------------------------------------------------*/
-.event .img-wrapper img {
+.event .img-wrapper {
+  margin: 30px 0; }
+  .event .img-wrapper img {
+    width: 100%;
+    height: auto; }
+
+.event h4.event-title {
+  border-top: 2px solid #000;
+  padding-top: 30px;
+  font-size: 18px;
+  font-family: "Karla", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  margin-bottom: 5px; }
+
+.event p {
+  margin-bottom: 5px; }
+
+.event .description-wrapper h3 {
+  font-size: 34px;
+  margin-bottom: 30px; }
+
+.event .description-wrapper p {
+  font-size: 25px;
+  margin-bottom: 30px; }
+
+.upstart .portfolio {
+  border-top: 2px solid #000;
+  padding-top: 30px; }
+
+.upstart .img-wrapper {
+  width: 320px;
+  float: left; }
+  .upstart .img-wrapper img.full-width {
+    margin-bottom: 0 !important;
+    border: none; }
+
+.upstart p.border {
+  border-top: 2px solid #000;
   width: 100%;
-  height: auto; }
+  margin-bottom: 0;
+  padding: 20px 0; }
+  .upstart p.border a {
+    font-size: 18px;
+    font-weight: bold; }
+
+.upstart .profile-header {
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  width: 100%;
+  float: left;
+  margin-bottom: 30px; }
+  .upstart .profile-header h2 {
+    margin-top: 90px; }
+  .upstart .profile-header p {
+    font-size: 48px;
+    font-family: "gt_sectrabook", Georgia, Times, serif;
+    margin-bottom: 0; }
+
+.upstart .description-wrapper h3 {
+  font-size: 34px;
+  margin-bottom: 30px; }
+
+.upstart .description-wrapper p {
+  font-size: 25px;
+  margin-bottom: 30px; }
 
 /*------------------------------------------------
 	Contact Page Styles

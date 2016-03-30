@@ -314,22 +314,29 @@
 	.flex-module {
 		border-top: 1px solid #000;
 		border-bottom: 1px solid #000;
-		padding: 30px 0 60px 0;
 		position: relative;
 		margin-bottom: 30px;
 		
+		.row {
+			padding-top: 30px;
+			padding-bottom: 60px;
+		}
+		
+		.row.slick-slider {
+			padding-bottom: 30px;
+		}
+		
+		.slick-list {
+			height: 384px;
+		}
+		
 		.img-wrapper {
-			height: 300px;
-			min-height: 300px;
-			overflow: hidden;
 			width: 95%;
 			
 			img {
-				width: 100%;
-				height: auto;
 			}
 		}
-				
+						
 		.box-meta {
 			background-color: #000;
 			padding: 20px 30px;
