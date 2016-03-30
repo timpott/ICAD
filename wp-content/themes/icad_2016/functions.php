@@ -31,7 +31,8 @@ if (function_exists('add_theme_support'))
     add_image_size('medium', 250, '', true); // Medium Thumbnail
     add_image_size('small', 120, '', true); // Small Thumbnail
     add_image_size('partner', 220, '', true); // Partner Logo
-    add_image_size('upstart', 240, 180, true); // Partner Logo
+    add_image_size('upstart', 240, 180, true); // Upstart Thumbnail
+    add_image_size('box-size', 400, 300, true); // Flex Box Size
     add_image_size('advert-large', 290, '', true); // Partner Logo
     add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
 
@@ -558,7 +559,7 @@ add_filter( 'wp_get_attachment_image_attributes', 'alter_att_attributes_wpse_102
 function wpb_list_child_pages() { 
 
 	global $post; 
-
+	
 	if (is_page() && $post->post_parent)	
 		$childpages = wp_list_pages( 'sort_column=menu_order&title_li=&child_of=' . $post->post_parent . '&echo=0' );
 	else

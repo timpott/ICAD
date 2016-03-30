@@ -19,7 +19,9 @@
 					// Resize
 					$advert_size = 'advert-large';
 					
+					echo '<a href="' . $advert_link . '" target="_blank">';
 					echo wp_get_attachment_image( $advert_image, $advert_size);
+					echo '</a>';
 
 				endif;
 				
