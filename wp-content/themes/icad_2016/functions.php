@@ -33,6 +33,8 @@ if (function_exists('add_theme_support'))
     add_image_size('partner', 220, '', true); // Partner Logo
     add_image_size('upstart', 240, 180, true); // Upstart Thumbnail
     add_image_size('box-size', 400, 300, true); // Flex Box Size
+    add_image_size('home-slider-size', 840, 620, true); // Slide Home Size
+    add_image_size('quick-links', 280, 210, true); // Slide Home Size
     add_image_size('advert-large', 290, '', true); // Partner Logo
     add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
 

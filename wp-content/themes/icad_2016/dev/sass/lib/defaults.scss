@@ -96,15 +96,17 @@ main {
 
 .btn-icad-large {
 	@include icad-btn-animate;
-	@include icad-btn-base(30px, 120px, 210px);
+	@include icad-btn-base(30px, auto, 210px);
 }
 
 /* Dev Stuff 7/3/16 */
 
+/*
 .home-box {
 	@include home-box(210px, none);
 	border: 1px solid #333;
 }
+*/
 
 .home-box.large {
 	@include home-box(260px, $brand-primary);

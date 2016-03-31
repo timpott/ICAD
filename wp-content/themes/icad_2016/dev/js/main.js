@@ -15,9 +15,36 @@ $( document ).ready(function() {
 		cssEase: 'linear'
    	});
    	
+   	$('.home-slider').slick({
+		arrows: false,
+		speed: 500,
+		dots: true,
+		fade: true,
+		cssEase: 'linear',
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		asNavFor: '.home-slider-img'
+   	});
+   	
+   	$('.home-slider-img').slick({
+		speed: 500,
+		fade: true,
+		cssEase: 'linear',
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false
+   	});
+   	
    	$('.2-col-slider .row').slick({
 		arrows: true,
 		slidesToShow: 2,
+		slidesToScroll: 1,
+		cssEase: 'linear'
+   	});
+   	
+   	$('.3-col-slider .row').slick({
+		arrows: true,
+		slidesToShow: 3,
 		slidesToScroll: 1,
 		cssEase: 'linear'
    	});

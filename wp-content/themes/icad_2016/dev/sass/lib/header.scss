@@ -31,25 +31,35 @@ header[role="banner"] {
 	}
 	
 	.hero-img {
-		padding-top: 20px;
+		padding-top: 25px;
 	}
 	
 	.nav {
 		ul {
 			border-top: 5px solid #000;
 			padding-left: 0;
+			margin-bottom: 0;
 			
 			li {
 				display: inline-block;
 				a {
 					display: block;
-					padding: 25px 27px;
+					padding: 25px 28px;
 					font: {
 						size: 22px;
 						family: $font-family-sans-serif;
 						weight: bold;
 					}
 				}
+			
+				&:first-child a {
+					padding-left: 0;
+				}
+				
+				&:last-child a {
+					padding-right: 0;
+				}
+			
 			}
 		}
 	}

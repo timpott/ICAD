@@ -28,42 +28,44 @@
     <!-- /top -->
     
     <div class="container">
-	    <div class="row">
 		    <header class="header" role="banner">
-			    <div class="col-lg-16">
-				    <nav class="sub-nav pull-right">
-					    <ul>
-						    <li><a href="#">Login</a></li>
-						    <li class=""><a href="#">Search</a></li>
-						    <li class=""><a href="#">Cart</a></li>
-						    <li class=""><a href="#" target="_blank">Facebook</a></li>
-						    <li class=""><a href="#" target="_blank">Twitter</a></li>
-						    <li class=""><a href="#" target="_blank">Linkedin</a></li>
-					    </ul>
-				    </nav>
+			    <div class="row">
+				    <div class="col-lg-16">
+					    <nav class="sub-nav pull-right">
+						    <ul>
+							    <li><a href="#">Login</a></li>
+							    <li class=""><a href="#">Search</a></li>
+							    <li class=""><a href="#">Cart</a></li>
+							    <li class=""><a href="#" target="_blank">Facebook</a></li>
+							    <li class=""><a href="#" target="_blank">Twitter</a></li>
+							    <li class=""><a href="#" target="_blank">Linkedin</a></li>
+						    </ul>
+					    </nav>
+				    </div>
 			    </div>
+				
 			    
-			    <div class="col-lg-8">
-				    <a href="<?php echo home_url(); ?>">
-					    <!-- Logo with PNG noscript fallback, all images with class of loader require noscript PNG fallback -->
-			    		<img class="loader logo-img" data-src="<?php echo get_template_directory_uri(); ?>/includes/img/icons/logo.svg" src="<?php echo get_template_directory_uri(); ?>/includes/img/icons/loading.png" alt="ICAD Logo" />
-			    		<noscript><img class="logo-img" src="<?php echo get_template_directory_uri(); ?>/includes/img/icons/logo.png"></noscript>
-			    	</a>
+			    <div class="row">
+				    <div class="col-lg-8">
+					    <a href="<?php echo home_url(); ?>">
+						    <!-- Logo with PNG noscript fallback, all images with class of loader require noscript PNG fallback -->
+				    		<img class="loader logo-img" data-src="<?php echo get_template_directory_uri(); ?>/includes/img/icons/logo.svg" src="<?php echo get_template_directory_uri(); ?>/includes/img/icons/loading.png" alt="ICAD Logo" />
+				    		<noscript><img class="logo-img" src="<?php echo get_template_directory_uri(); ?>/includes/img/icons/logo.png"></noscript>
+				    	</a>
+				    </div>
+				    
+				    <div class="col-lg-8">
+					    	<!-- Hero image with PNG noscript fallback -->
+					    	<img class="loader hero-img" data-src="<?php echo get_template_directory_uri(); ?>/includes/img/icons/institute-of-creative.svg" src="<?php echo get_template_directory_uri(); ?>/includes/img/icons/loading.png" alt="Institute of creative advertising and design" />
+					    	<noscript><img class="hero-img" src="<?php echo get_template_directory_uri(); ?>/includes/img/icons/institute-of-creative.png"></noscript>
+				    </div> 
 			    </div>
-			    
-			    <div class="col-lg-8">
-				    	<!-- Hero image with PNG noscript fallback -->
-				    	<img class="loader hero-img" data-src="<?php echo get_template_directory_uri(); ?>/includes/img/icons/institute-of-creative.svg" src="<?php echo get_template_directory_uri(); ?>/includes/img/icons/loading.png" alt="Institute of creative advertising and design" />
-				    	<noscript><img class="hero-img" src="<?php echo get_template_directory_uri(); ?>/includes/img/icons/institute-of-creative.png"></noscript>
-			    </div> 
 			    
 			    <div class="clearfix"></div>
 			    
-			    <nav class="nav" role="navigation">
-				    <?php html5blank_nav(); ?>
-			    </nav>
-			    <!-- /nav -->
+				<nav class="nav" role="navigation">
+					<?php html5blank_nav(); ?>
+				</nav>
+				<!-- /nav -->
 		    </header>
 		    <!-- /header -->
-	    </div>
-	    <!-- /row -->
