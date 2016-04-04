@@ -4,6 +4,7 @@
 	$page_title = get_the_title();
 	echo '<div class="title-wrapper">';
 	echo 	'<h1 class="page-title">' . $page_title . '</h1>';
+	echo '</div>'; // title-wrapper close
 	
 	// Flexible Content Loop
 	if(have_rows('flexible_content')):
@@ -13,9 +14,9 @@
 			if(get_row_layout() == 'sub_title'):
 				$sub_title = get_sub_field('sub_title_f01');
 				echo 	'<p class="sub-title">' . $sub_title . '</p>';
-				echo '</div>'; // title-wrapper close
-				
-			elseif(get_row_layout() == 'hero_introduction'):	
+			endif;
+					
+			if(get_row_layout() == 'hero_introduction'):	
 				$introduction_text = get_sub_field('hero_introduction_f01');
 				echo '<h3 class="intro-text">' . $introduction_text . '</h3>';
 				
@@ -41,6 +42,24 @@
 				$link_url = get_sub_field('link_f01');
 				$text_url = get_sub_field('text_f01');
 				echo '<a class="btn-icad-small" href="' . $link_url . '">' . $text_url . '</a>';
+				
+			elseif(get_row_layout() == 'link_block'):
+				
+				echo '<nav class="link-block" role="navigation">';
+				echo 	'<ul>';
+				
+				if(have_rows('link')):					
+			    	while ( have_rows('link') ) : the_row();
+			    	$link_block_url = get_sub_field('link_url');
+					$link_block_text = get_sub_field('link_title');
+			    	echo 	'<li><a href=" '. $link_block_url .' ">' . $link_block_text . '</a></li>';
+					endwhile;
+					
+				endif;
+					
+			    echo 	'</ul>';
+			    echo '</nav>';
+			    echo '<div class="clearfix"></div>';
 				
 			elseif(get_row_layout() == 'key_dates'):
 				$key_title = get_sub_field('key_date_header');

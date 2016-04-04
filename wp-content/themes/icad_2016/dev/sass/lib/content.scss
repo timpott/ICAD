@@ -219,6 +219,11 @@
 	Page Content
 ------------------------------------------------*/
 
+#content.about {
+	
+}
+
+
 #content {
 	border-top: 2px solid #000;
 	
@@ -230,7 +235,7 @@
 		font-size: 69px;
 		margin: 0;
 	}
-	
+		
 	.sub-title {
 		font: {
 			size: 36px;
@@ -238,6 +243,8 @@
 			weight: normal;
 		}
 		margin: 0;
+		margin-top: -30px;
+		padding-bottom: 30px;
 	}
 	
 	img.full-width {
@@ -407,6 +414,46 @@
 		}
 	}
 	
+	.link-block {
+		margin-bottom: 30px;;
+		float: left;
+		
+		ul {
+			padding-left: 0;
+			float: left;
+			margin-bottom: 0;
+		}
+		
+		li {
+			border: 2px solid #000;
+			width: auto;
+			display: inline-block;
+			float: left;
+			list-style: none;
+			margin-right: 25px;
+			text-align: center;
+			
+			&:hover {
+				background:#000000;
+				color:#FFFFFF;
+				text-decoration: none;
+			}
+			
+			&:hover a {
+				color: #fff;
+				text-decoration: none;
+			}
+		}
+		
+		a {
+			font: {
+				weight: bold;
+			}
+			display: block;
+			padding: 10px;
+		}
+	}
+	
 	.alumni-module {
 		margin-bottom: 30px;
 		h3 {
@@ -486,6 +533,11 @@
 			padding-bottom: 10px;
 		}
 		
+		h1, h2, h3, h4, h5, h6, em, strong {
+			margin-bottom: 30px;
+		}
+
+		
 	}
 	
 	.tab-content {
@@ -519,6 +571,7 @@
 		}
 		
 		li.active {
+			border: 2px solid #ffa19f;
 			a {
 				border: none;
 				background-color: #ffa19f;
@@ -527,10 +580,8 @@
 	}
 	
 	.flex-module {
-		border-top: 1px solid #000;
-		border-bottom: 1px solid #000;
+		border-top: 2px solid #000;
 		position: relative;
-		margin-bottom: 30px;
 		
 		.row {
 			padding-top: 30px;
@@ -547,9 +598,14 @@
 		
 		.img-wrapper {
 			width: 95%;
+			min-height: 300px;
 			
 			img {
 			}
+		}
+		
+		.slick-slide {
+			min-height: 358px;
 		}
 						
 		.box-meta {
@@ -566,6 +622,7 @@
 			p {
 				color: #fff;
 				margin: 0;
+				padding-bottom: 10px;
 			}
 			
 			h4 {
@@ -584,6 +641,59 @@
 			
 			small {
 				color: #fff;
+			}
+		}
+	}
+	
+}
+
+#content.about {
+	.page-title {
+		line-height: 1;
+		padding-top: 50px;
+		border-bottom: 2px solid #000;
+		min-height: 535px;
+	}
+	
+	.page-content {
+		border-top: none;
+		border-bottom: 2px solid #000;
+		padding-top: 0;
+	}
+	
+	.flex-module {
+		.row {
+			padding-bottom: 0;
+		}
+		
+		.board-wrapper {
+ 			min-height: 370px;
+ 			height: 400px;
+		}
+		
+		.img-wrapper {
+			min-height: 265px;
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+		
+		.box-meta {
+			width: 350px;
+			position: relative;
+			left: 30px;
+			top: -60px;
+		}
+		
+		.last {
+			.img-wrapper {
+				padding: 40px;
+				h4 {
+					font-size: 46px;
+					line-height: 1;
+					padding-top: 20px;
+				}
 			}
 		}
 	}

@@ -410,7 +410,9 @@ header[role="banner"] .nav ul {
     font-size: 36px;
     font-family: "gt_sectrabook", Georgia, Times, serif;
     font-weight: normal;
-    margin: 0; }
+    margin: 0;
+    margin-top: -30px;
+    padding-bottom: 30px; }
   #content img.full-width {
     width: 100%;
     height: auto;
@@ -505,6 +507,32 @@ header[role="banner"] .nav ul {
           color: #fff; }
       #content .upstarts-module .upstart-meta a {
         color: #fff; }
+  #content .link-block {
+    margin-bottom: 30px;
+    float: left; }
+    #content .link-block ul {
+      padding-left: 0;
+      float: left;
+      margin-bottom: 0; }
+    #content .link-block li {
+      border: 2px solid #000;
+      width: auto;
+      display: inline-block;
+      float: left;
+      list-style: none;
+      margin-right: 25px;
+      text-align: center; }
+      #content .link-block li:hover {
+        background: #000000;
+        color: #FFFFFF;
+        text-decoration: none; }
+      #content .link-block li:hover a {
+        color: #fff;
+        text-decoration: none; }
+    #content .link-block a {
+      font-weight: bold;
+      display: block;
+      padding: 10px; }
   #content .alumni-module {
     margin-bottom: 30px; }
     #content .alumni-module h3 {
@@ -550,6 +578,8 @@ header[role="banner"] .nav ul {
     #content .page-content img.alignright, #content .tab-content img.alignright {
       padding-left: 30px;
       padding-bottom: 10px; }
+    #content .page-content h1, #content .page-content h2, #content .page-content h3, #content .page-content h4, #content .page-content h5, #content .page-content h6, #content .page-content em, #content .page-content strong, #content .tab-content h1, #content .tab-content h2, #content .tab-content h3, #content .tab-content h4, #content .tab-content h5, #content .tab-content h6, #content .tab-content em, #content .tab-content strong {
+      margin-bottom: 30px; }
   #content .tab-content {
     border-top: none; }
   #content .nav-tabs {
@@ -569,14 +599,14 @@ header[role="banner"] .nav ul {
         border: none; }
       #content .nav-tabs li:last-child {
         margin-right: 0; }
-    #content .nav-tabs li.active a {
-      border: none;
-      background-color: #ffa19f; }
+    #content .nav-tabs li.active {
+      border: 2px solid #ffa19f; }
+      #content .nav-tabs li.active a {
+        border: none;
+        background-color: #ffa19f; }
   #content .flex-module {
-    border-top: 1px solid #000;
-    border-bottom: 1px solid #000;
-    position: relative;
-    margin-bottom: 30px; }
+    border-top: 2px solid #000;
+    position: relative; }
     #content .flex-module .row {
       padding-top: 30px;
       padding-bottom: 60px; }
@@ -585,7 +615,10 @@ header[role="banner"] .nav ul {
     #content .flex-module .slick-list {
       height: 384px; }
     #content .flex-module .img-wrapper {
-      width: 95%; }
+      width: 95%;
+      min-height: 300px; }
+    #content .flex-module .slick-slide {
+      min-height: 358px; }
     #content .flex-module .box-meta {
       background-color: #000;
       padding: 20px 30px;
@@ -596,7 +629,8 @@ header[role="banner"] .nav ul {
       right: 20px; }
       #content .flex-module .box-meta p {
         color: #fff;
-        margin: 0; }
+        margin: 0;
+        padding-bottom: 10px; }
       #content .flex-module .box-meta h4 {
         padding: 10px 0; }
         #content .flex-module .box-meta h4 a {
@@ -606,6 +640,43 @@ header[role="banner"] .nav ul {
         color: #fff; }
       #content .flex-module .box-meta small {
         color: #fff; }
+
+#content.about .page-title {
+  line-height: 1;
+  padding-top: 50px;
+  border-bottom: 2px solid #000;
+  min-height: 535px; }
+
+#content.about .page-content {
+  border-top: none;
+  border-bottom: 2px solid #000;
+  padding-top: 0; }
+
+#content.about .flex-module .row {
+  padding-bottom: 0; }
+
+#content.about .flex-module .board-wrapper {
+  min-height: 370px;
+  height: 400px; }
+
+#content.about .flex-module .img-wrapper {
+  min-height: 265px; }
+  #content.about .flex-module .img-wrapper img {
+    width: 100%;
+    height: auto; }
+
+#content.about .flex-module .box-meta {
+  width: 350px;
+  position: relative;
+  left: 30px;
+  top: -60px; }
+
+#content.about .flex-module .last .img-wrapper {
+  padding: 40px; }
+  #content.about .flex-module .last .img-wrapper h4 {
+    font-size: 46px;
+    line-height: 1;
+    padding-top: 20px; }
 
 .sidebar .sidebar-nav {
   margin-bottom: 20px;

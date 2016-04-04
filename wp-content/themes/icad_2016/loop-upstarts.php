@@ -8,6 +8,8 @@
 		$year_name = $year->name;
 		
 	endif;
+	
+	$color = array('#cfa2f3', '#00ffdc', '#ffa2a0');
 
 	$i = 0;
 	query_posts(array(
@@ -36,7 +38,8 @@
 			$profile_role = get_field('role');
 			$profile_name = get_the_title();
 			$profile_link = get_the_permalink();
-
+			$choose_color = array_rand($color);
+			
 			echo '<div class="col-lg-5">';
 			echo 	'<div class="upstart-wrapper">';
 			
@@ -47,7 +50,7 @@
 		
 			echo 		'<div class="upstart-meta">';
 			echo 			'<p>' . $profile_role . '</p>';
-			echo 			'<h4><a href="' . $profile_link . '">' . $profile_name . '</a></h4>';
+			echo 			'<h4><a style="color: ' . $color[$choose_color] . '" href="' . $profile_link . '">' . $profile_name . '</a></h4>';
 			echo 			'<a href="' . $profile_link . '">View Profile</a>';
 			echo 		'</div>';
 			echo 	'</div>';

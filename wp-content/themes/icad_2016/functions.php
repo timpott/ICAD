@@ -606,4 +606,9 @@ function tsm_convert_id_to_term_in_query($query) {
 	}
 }
 
+add_action( 'init', 'my_add_excerpts_to_pages' );
+function my_add_excerpts_to_pages() {
+     add_post_type_support( 'page', 'excerpt' );
+}
+
 ?>
