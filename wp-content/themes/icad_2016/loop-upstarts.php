@@ -51,7 +51,7 @@
 			echo 		'<div class="upstart-meta">';
 			echo 			'<p>' . $profile_role . '</p>';
 			echo 			'<h4><a style="color: ' . $color[$choose_color] . '" href="' . $profile_link . '">' . $profile_name . '</a></h4>';
-			echo 			'<a href="' . $profile_link . '">View Profile</a>';
+			echo 			'<a class="more white" href="' . $profile_link . '">View Profile</a>';
 			echo 		'</div>';
 			echo 	'</div>';
 			echo '</div>';

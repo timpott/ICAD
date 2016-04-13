@@ -41,7 +41,7 @@ $post_objects = get_sub_field('content_type');
 			echo    	'<small>Upcoming Event</small>';
 			echo        '<h4><a style="color:' . $color[$choose_color] . '" href="' . $flex_link . '">' . $flex_title . '</a></h4>';
 			echo        '<p>' . $flex_event_date . '</p>';
-			echo        '<a href="' . $flex_link . '">Find Out More</a>';
+			echo        '<a class="more white" href="' . $flex_link . '">Find Out More</a>';
 			echo    '</div>';
 											
 			echo '</div>';
@@ -49,24 +49,33 @@ $post_objects = get_sub_field('content_type');
 		}
 								
 		if($post_object->post_type == 'page') {
-			
-			$flex_page_image = get_sub_field('hero_image_f01', $post_object->ID);
+
 			$flex_page_excerpt = $post_object->post_excerpt;
-							
-			echo '<div class="col-lg-8">';
-													
-			$flex_size3 = 'box-size';
-			echo '<div class="img-wrapper">';
-			echo 	wp_get_attachment_image( $flex_page_image, $flex_size3);
-			echo '</div>';
 									
-			echo 	'<div class="box-meta">';
-			echo        '<h4><a href="' . $flex_link . '">' . $flex_title . '</a></h4>';
-			echo        '<p>' . $flex_page_excerpt . '</p>';
-			echo        '<a href="' . $flex_link . '">Find Out More</a>';
-			echo    '</div>';
+			echo '<div class="col-lg-8">';
+															
+				$flex_size3 = 'box-size';
+				echo '<div class="img-wrapper">';
+					
+				if(have_rows('flexible_content', $post_object->ID )):
+					while ( have_rows('flexible_content', $post_object->ID) ) : the_row();	
+						
+						if(get_row_layout() == 'hero_image'):
+							$flex_page_image = get_sub_field('hero_image_f01', $post_object->ID);
+							echo 	wp_get_attachment_image( $flex_page_image, $flex_size3);
+							echo '</div>';
+						endif;
+						
+					endwhile;
+				endif;
 											
-			echo '</div>';					
+				echo 	'<div class="box-meta">';
+				echo        '<h4><a href="' . $flex_link . '">' . $flex_title . '</a></h4>';
+				echo        '<p>' . $flex_page_excerpt . '</p>';
+				echo        '<a class="more white" href="' . $flex_link . '">Find Out More</a>';
+				echo    '</div>';
+													
+		echo '</div>';				
 		}
 								
 		if($post_object->post_type == 'upstart') {
@@ -86,7 +95,7 @@ $post_objects = get_sub_field('content_type');
 			echo    	'<small>Featured</small>';
 			echo        '<h4><a href="' . $flex_link . '">' . $flex_title . '</a></h4>';
 			echo        '<p>' . $flex_profile_role . '</p>';
-			echo        '<a href="' . $flex_link . '">Find Out More</a>';
+			echo        '<a class="more white" href="' . $flex_link . '">Find Out More</a>';
 			echo    '</div>';
 											
 			echo '</div>';

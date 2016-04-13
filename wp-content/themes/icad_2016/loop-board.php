@@ -17,7 +17,7 @@
 			echo 					'<small>Board Member</small>';
 			echo 					'<h4><a style="color: ' . $color[$choose_color] . '" href="#">Kathryn Wilson</a></h4>';
 			echo 					'<p>Slater Design</p>';
-			echo 					'<a href="#">View Profile</a>';
+			echo 					'<a class="more white" href="#">View Profile</a>';
 			echo 				'</div>';
 			echo 			'</div>';
 			echo 		'</div>';
@@ -32,7 +32,7 @@
 			echo 					'<small>Board Member</small>';
 			echo 					'<h4><a style="color: ' . $color[$choose_color] . '" href="#">Kathryn Wilson</a></h4>';
 			echo 					'<p>Slater Design</p>';
-			echo 					'<a href="#">View Profile</a>';
+			echo 					'<a class="more white" href="#">View Profile</a>';
 			echo 				'</div>';
 			echo 			'</div>';
 			echo 		'</div>';
@@ -47,7 +47,7 @@
 			echo 					'<small>Board Member</small>';
 			echo 					'<h4><a style="color: ' . $color[$choose_color] . '" href="#">Kathryn Wilson</a></h4>';
 			echo 					'<p>Slater Design</p>';
-			echo 					'<a href="#">View Profile</a>';
+			echo 					'<a class="more white" href="#">View Profile</a>';
 			echo 				'</div>';
 			echo 			'</div>';
 			echo 		'</div>';
@@ -62,7 +62,7 @@
 			echo 					'<small>Board Member</small>';
 			echo 					'<h4><a style="color: ' . $color[$choose_color] . '" href="#">Kathryn Wilson</a></h4>';
 			echo 					'<p>Slater Design</p>';
-			echo 					'<a href="#">View Profile</a>';
+			echo 					'<a class="more white" href="#">View Profile</a>';
 			echo 				'</div>';
 			echo 			'</div>';
 			echo 		'</div>';
@@ -77,7 +77,7 @@
 			echo 					'<small>Board Member</small>';
 			echo 					'<h4><a style="color: ' . $color[$choose_color] . '" href="#">Kathryn Wilson</a></h4>';
 			echo 					'<p>Slater Design</p>';
-			echo 					'<a href="#">View Profile</a>';
+			echo 					'<a class="more white" href="#">View Profile</a>';
 			echo 				'</div>';
 			echo 			'</div>';
 			echo 		'</div>';
@@ -90,7 +90,7 @@
 			
 			echo 				'<div class="box-meta">';
 			echo 					'<p><a style="color: ' . $color[$choose_color] . '" href="#">' . $board_content_text . '</a></p>';
-			echo 					'<a href=" ' . $board_content_link . '">Contact us</a>';
+			echo 					'<a class="more white" href=" ' . $board_content_link . '">Contact us</a>';
 			echo 				'</div>';
 			echo 			'</div>';
 			echo 		'</div>';

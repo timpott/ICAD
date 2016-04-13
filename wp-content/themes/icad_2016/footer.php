@@ -70,6 +70,7 @@
 						<div class="col-lg-8">
 							<nav class="footer-nav">
 							 	<?php wp_nav_menu( array( 'theme_location' => 'footer-menu' ) ); ?>
+							 	<a href="#top"><div class="arrow-top"></div></a>
 							</nav>
 							
 							<?php 

@@ -35,4 +35,51 @@
 			}
 		}
 	}
+	
+	.fb {
+		background: url('../img/icons/facebook.svg') no-repeat center center;
+	}
+	
+	.tw {
+		background: url('../img/icons/twitter.svg') no-repeat center center;
+	}
+	
+	.li {
+		background: url('../img/icons/linkedin.svg') no-repeat center center;
+	}
+	
+	.search {
+		background: url('../img/icons/search.svg') no-repeat center center;
+	}
+	
+	a.more.white {		
+		&:after {
+			content: "";
+			background: url('../img/icons/longarrow-right-01-white.svg') no-repeat center center;
+			padding-right: 60px;
+			background-size: 45px 15px;
+		}
+	}
+	
+	a.more.black {
+		&:after {
+			content: "";
+			background: url('../img/icons/longarrow-right-01.svg') no-repeat center center;
+			padding-right: 60px;
+			background-size: 45px 15px;
+		}
+	}
+	
+	.tw-icon {
+		background: url('../img/icons/twitter.svg') no-repeat center top;
+		background-size: 40px 32px;
+		margin-bottom: 20px;
+		position: relative;
+	}
+	
+	.arrow-top {
+		background: url('../img/icons/arrowup-01.svg') no-repeat center top;
+		background-size: 40px 32px;
+	}
+
 }

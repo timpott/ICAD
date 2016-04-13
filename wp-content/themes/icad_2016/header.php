@@ -23,7 +23,7 @@
     	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     
-    <div class="top-bar">    
+    <div id="top" class="top-bar">    
     </div>
     <!-- /top -->
     
@@ -33,12 +33,12 @@
 				    <div class="col-lg-16">
 					    <nav class="sub-nav pull-right">
 						    <ul>
-							    <li><a href="#">Login</a></li>
-							    <li class=""><a href="#">Search</a></li>
-							    <li class=""><a href="#">Cart</a></li>
-							    <li class=""><a href="#" target="_blank">Facebook</a></li>
-							    <li class=""><a href="#" target="_blank">Twitter</a></li>
-							    <li class=""><a href="#" target="_blank">Linkedin</a></li>
+							   	<!-- <li><a href="#">Login</a></li> -->
+							    <li class=""><a class="search" href="#">Search</a></li>
+							    <!-- <li class=""><a href="#">Cart</a></li> -->
+							    <li><a class="fb" href="#" target="_blank">Facebook</a></li>
+							    <li><a class="tw" href="#" target="_blank">Twitter</a></li>
+							    <li><a class="li" href="#" target="_blank">Linkedin</a></li>
 						    </ul>
 					    </nav>
 				    </div>

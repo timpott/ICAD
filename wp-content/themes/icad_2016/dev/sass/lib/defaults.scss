@@ -18,6 +18,10 @@
     text-shadow: none;
 }
 
+:focus {
+	outline: none;
+}
+
 audio,
 canvas,
 iframe,

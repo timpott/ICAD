@@ -59,9 +59,16 @@ footer[role="contentinfo"] {
 		color: #fff;
 		background-color: transparent;
 		padding: 5px 10px;
+		
+		&:hover {
+			background:#fff;
+			color:#000;
+			text-decoration: none;
+		}
 	}
 	
 	.footer-nav {
+		position: relative;
 		ul {
 		padding: 0;
 		list-style: none;
@@ -147,6 +154,19 @@ footer[role="contentinfo"] {
 			&:hover {
  				opacity: 1;
 			}
+		}
+	}
+	
+	.arrow-top {
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		right: -60px;
+		top: 0;
+		cursor: pointer;
+		
+		a {
+			display: block;
 		}
 	}
 }
